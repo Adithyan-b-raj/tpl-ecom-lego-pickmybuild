@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PickMyBuild | Precision Brick Supercars & Display Engineering Kits</title>
+  <meta name="description" content="Build museum-grade 1:14 and 1:8 scale brick supercars. 100% clutch precision guarantee, functional V8/V12 gearboxes, and free express delivery across India with COD & instant UPI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/pickle-sections.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- ==================== 1. ANNOUNCEMENT MARQUEE ==================== -->
+  <div class="pk-marquee-bar" style="background: #0F172A; color: #FDA4AF; padding: 0.9rem 0; overflow: hidden; border-bottom: 1px solid #1E293B;">
+    <div style="display: flex; width: max-content; animation: marqueeScroll 24s linear infinite; gap: 3rem; font-size: 1.35rem; font-weight: 700; letter-spacing: 0.04em;">
+      <span>🏎️ FREE EXPRESS AIR SHIPPING ACROSS INDIA ON ORDERS OVER ₹999</span>
+      <span>•</span>
+      <span>⭐ 100% CLUTCH PRECISION GUARANTEE</span>
+      <span>•</span>
+      <span>⚡ ZERO MISSING PARTS PROMISE: FREE 24H REPLACEMENT DISPATCH</span>
+      <span>•</span>
+      <span>🛡️ CASH ON DELIVERY & INSTANT UPI AVAILABLE</span>
+      <span>•</span>
+      <span>🏎️ FREE EXPRESS AIR SHIPPING ACROSS INDIA ON ORDERS OVER ₹999</span>
+      <span>•</span>
+      <span>⭐ 100% CLUTCH PRECISION GUARANTEE</span>
+      <span>•</span>
+      <span>⚡ ZERO MISSING PARTS PROMISE: FREE 24H REPLACEMENT DISPATCH</span>
+      <span>•</span>
+      <span>🛡️ CASH ON DELIVERY & INSTANT UPI AVAILABLE</span>
+    </div>
+  </div>
+  <style>
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+
+  <!-- ==================== SITE HEADER ==================== -->
+  <header class="site-header">
+    <div class="page-width site-header__inner">
+      <a href="/" class="site-logo">
+        <span class="site-logo__mark">P</span>
+        <span>Pick<span>My</span>Build</span>
+      </a>
+
+      <nav class="site-nav">
+        <a href="/" class="site-nav__link is-active">Home</a>
+        <a href="/shop.html" class="site-nav__link">All Supercars</a>
+        <a href="/shop.html?category=Hypercars" class="site-nav__link">Hypercars</a>
+        <a href="/shop.html?category=JDM+Classics" class="site-nav__link">JDM Icons</a>
+        <a href="/shop.html?category=GT3+Racers" class="site-nav__link">GT3 Motorsport</a>
+        <a href="/track.html" class="site-nav__link">Track Order</a>
+        <a href="/admin.html" class="site-nav__link" style="color: #64748B;">Ops Admin</a>
+      </nav>
+
+      <div class="site-actions">
+        <a href="/track.html" class="site-action-btn" title="Track Order">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 6h11v10H2z"/><path d="M13 9h4l4 4v3h-8"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>
+          </svg>
+        </a>
+        <button type="button" class="site-action-btn" data-open-cart title="View Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <span class="cart-count-badge" data-cart-count style="display: none;">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="MainContent">
+    <!-- ==================== 2. CIRCULAR CATEGORY NAV ==================== -->
+    <section class="pk-section" style="padding: 2.8rem 0 1.2rem;">
+      <div class="page-width">
+        <pickle-slider class="pk-slider">
+          <ul class="pk-slider__track" data-track tabindex="0" aria-label="Car Categories" style="--pk-slide-width: 11rem; gap: 2rem; justify-content: flex-start;">
+            <li data-item>
+              <a href="/shop.html?category=Hypercars" class="pk-cat-circle">
+                <div class="pk-cat-circle__avatar">
+                  <img src="/img/products/lamborghini-aventador-svj.png" alt="Hypercars" />
+                </div>
+                <span class="pk-cat-circle__label">Hypercars</span>
+              </a>
+            </li>
+            <li data-item>
+              <a href="/shop.html?category=JDM+Classics" class="pk-cat-circle">
+                <div class="pk-cat-circle__avatar">
+                  <img src="/img/products/nissan-skyline-r34.png" alt="JDM Classics" />
+                </div>
+                <span class="pk-cat-circle__label">JDM Icons</span>
+              </a>
+            </li>
+            <li data-item>
+              <a href="/shop.html?category=GT3+Racers" class="pk-cat-circle">
+                <div class="pk-cat-circle__avatar">
+                  <img src="/img/products/bmw-m4-gt3.png" alt="GT3 Racers" />
+                </div>
+                <span class="pk-cat-circle__label">GT3 Racers</span>
+              </a>
+            </li>
+            <li data-item>
+              <a href="/shop.html?category=Muscle+Legends" class="pk-cat-circle">
+                <div class="pk-cat-circle__avatar">
+                  <img src="/img/products/dodge-challenger.png" alt="Muscle Legends" />
+                </div>
+                <span class="pk-cat-circle__label">Muscle Cars</span>
+              </a>
+            </li>
+            <li data-item>
+              <a href="/shop.html?category=Off-Road+4x4" class="pk-cat-circle">
+                <div class="pk-cat-circle__avatar">
+                  <img src="/img/products/toyota-fj-cruiser.png" alt="Off-Road 4x4" />
+                </div>
+                <span class="pk-cat-circle__label">Off-Road 4x4</span>
+              </a>
+            </li>
+            <li data-item>
+              <a href="/shop.html?category=Supercars" class="pk-cat-circle">
+                <div class="pk-cat-circle__avatar">
+                  <img src="/img/products/bmw-m1.png" alt="Supercars" />
+                </div>
+                <span class="pk-cat-circle__label">Supercars</span>
+              </a>
+            </li>
+            <li data-item>
+              <a href="/shop.html" class="pk-cat-circle">
+                <div class="pk-cat-circle__avatar">
+                  <img src="/img/products/koenigsegg-one-1.png" alt="Megacars" />
+                </div>
+                <span class="pk-cat-circle__label">Megacars</span>
+              </a>
+            </li>
+            <li data-item>
+              <a href="/shop.html" class="pk-cat-circle">
+                <div class="pk-cat-circle__avatar">
+                  <img src="/img/products/mazda-rx7-fd.png" alt="Rotary FD" />
+                </div>
+                <span class="pk-cat-circle__label">Twin Rotary</span>
+              </a>
+            </li>
+          </ul>
+        </pickle-slider>
+      </div>
+    </section>
+
+    <!-- ==================== 3. HERO SLIDESHOW ==================== -->
+    <section class="hero-slider" style="margin: 0 1.6rem; border-radius: 2.4rem;">
+      <div class="page-width">
+        <!-- Slide 1 -->
+        <div class="hero-slide is-active" id="slide-1">
+          <div class="hero-slide__grid">
+            <div>
+              <div class="hero-badge">⚡ 1:14 SCALE DISPLAY ENGINEERING</div>
+              <h1 class="hero-title">Precision Brick Supercars for Master Builders</h1>
+              <p class="hero-subtitle">
+                Engineered with functioning V8/V12 piston gearboxes, scissor doors, and true-to-scale aerodynamic liveries. 100% clutch-tight ABS elements.
+              </p>
+              <div class="hero-cta-group">
+                <a href="/shop.html" class="btn-primary">
+                  <span>Explore Garage</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 5 7 7-7 7"/></svg>
+                </a>
+                <a href="#video-reels" class="btn-secondary">
+                  <span>Watch Reels</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="hero-media-wrap">
+              <div class="hero-car-glow"></div>
+              <img src="/img/products/lamborghini-aventador-svj.png" alt="Lamborghini Aventador SVJ" class="hero-car-img" style="max-height: 38rem;" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide" id="slide-2">
+          <div class="hero-slide__grid">
+            <div>
+              <div class="hero-badge" style="background: rgba(59, 130, 246, 0.2); border-color: rgba(59, 130, 246, 0.5); color: #93C5FD;">🏁 JDM DRIFT & TIME ATTACK</div>
+              <h2 class="hero-title">Godzilla R34 V-Spec & RX-7 Spirit R</h2>
+              <p class="hero-subtitle">
+                Detailed RB26DETT twin-turbo engine bays, working rack-and-pinion steering, and pop-up headlamps. The ultimate Japanese sports car homage.
+              </p>
+              <div class="hero-cta-group">
+                <a href="/shop.html?category=JDM+Classics" class="btn-primary">
+                  <span>Shop JDM Kits</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 5 7 7-7 7"/></svg>
+                </a>
+                <a href="/product.html?slug=nissan-skyline-r34" class="btn-secondary">
+                  <span>View R34 V-Spec</span>
+                </a>
+              </div>
+            </div>
+            <div class="hero-media-wrap">
+              <div class="hero-car-glow" style="background: radial-gradient(circle, rgba(59, 130, 246, 0.35) 0%, transparent 70%);"></div>
+              <img src="/img/products/nissan-skyline-r34.png" alt="Nissan Skyline R34" class="hero-car-img" style="max-height: 38rem;" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Dots -->
+        <div class="hero-dots">
+          <button type="button" class="hero-dot is-active" aria-label="Slide 1" onclick="switchSlide(0)"></button>
+          <button type="button" class="hero-dot" aria-label="Slide 2" onclick="switchSlide(1)"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. 4-STEP BUILD GUIDE (pk-steps) ==================== -->
+    <section class="pk-section color-scheme-2" style="padding: 5.6rem 0; margin-top: 3.2rem;">
+      <div class="page-width">
+        <div class="pk-heading pk-heading--center">
+          <p class="pk-heading__eyebrow">The PickMyBuild Experience</p>
+          <h2 class="pk-heading__title">How Your Dream Garage Takes Shape</h2>
+          <p class="pk-heading__sub">Every kit is curated for a satisfying, zero-frustration engineering build from pouch 1 to display stand.</p>
+        </div>
+
+        <ul class="pk-steps pk-steps--4" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr)); gap: 2rem; list-style: none; padding: 0; margin: 0;">
+          <li class="pk-step" style="background: #ffffff; padding: 2.4rem; border-radius: var(--pk-radius); border: 1px solid var(--color-border); box-shadow: var(--pk-shadow);">
+            <div style="width: 5rem; height: 5rem; border-radius: 1.2rem; background: #FFF1F2; color: #E11D48; display: flex; align-items: center; justify-content: center; margin-bottom: 1.6rem;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <span style="font-size: 1.2rem; font-weight: 800; color: #E11D48; text-transform: uppercase;">Step 01</span>
+            <h3 style="font-size: 1.8rem; font-weight: 800; margin: 0.6rem 0 0.8rem;">Numbered Pouches</h3>
+            <p style="font-size: 1.4rem; color: #64748B; margin: 0;">Pieces are organized into sequenced bags numbered 1 through 6 to prevent table clutter and lost bricks.</p>
+          </li>
+
+          <li class="pk-step" style="background: #ffffff; padding: 2.4rem; border-radius: var(--pk-radius); border: 1px solid var(--color-border); box-shadow: var(--pk-shadow);">
+            <div style="width: 5rem; height: 5rem; border-radius: 1.2rem; background: #EFF6FF; color: #2563EB; display: flex; align-items: center; justify-content: center; margin-bottom: 1.6rem;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <span style="font-size: 1.2rem; font-weight: 800; color: #2563EB; text-transform: uppercase;">Step 02</span>
+            <h3 style="font-size: 1.8rem; font-weight: 800; margin: 0.6rem 0 0.8rem;">Full-Color 3D Manual</h3>
+            <p style="font-size: 1.4rem; color: #64748B; margin: 0;">High-contrast isometric diagrams highlight newly added pieces in color with 1:1 scale fastener guides.</p>
+          </li>
+
+          <li class="pk-step" style="background: #ffffff; padding: 2.4rem; border-radius: var(--pk-radius); border: 1px solid var(--color-border); box-shadow: var(--pk-shadow);">
+            <div style="width: 5rem; height: 5rem; border-radius: 1.2rem; background: #ECFDF5; color: #059669; display: flex; align-items: center; justify-content: center; margin-bottom: 1.6rem;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </div>
+            <span style="font-size: 1.2rem; font-weight: 800; color: #059669; text-transform: uppercase;">Step 03</span>
+            <h3 style="font-size: 1.8rem; font-weight: 800; margin: 0.6rem 0 0.8rem;">Working Kinematics</h3>
+            <p style="font-size: 1.4rem; color: #64748B; margin: 0;">Assemble independent spring wishbones, working rear differentials, and pistons that pump with rolling wheels.</p>
+          </li>
+
+          <li class="pk-step" style="background: #ffffff; padding: 2.4rem; border-radius: var(--pk-radius); border: 1px solid var(--color-border); box-shadow: var(--pk-shadow);">
+            <div style="width: 5rem; height: 5rem; border-radius: 1.2rem; background: #FAF5FF; color: #7C3AED; display: flex; align-items: center; justify-content: center; margin-bottom: 1.6rem;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <span style="font-size: 1.2rem; font-weight: 800; color: #7C3AED; text-transform: uppercase;">Step 04</span>
+            <h3 style="font-size: 1.8rem; font-weight: 800; margin: 0.6rem 0 0.8rem;">Museum Display Stand</h3>
+            <p style="font-size: 1.4rem; color: #64748B; margin: 0;">Mount onto the included high-gloss acrylic desk stand with laser-engraved engine specs, 0-100 time, and horsepower.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== 5. MOST LOVED BUILDS (pk-product-showcase) ==================== -->
+    <section class="pk-section" style="padding: 5.6rem 0 3.2rem;">
+      <div class="page-width">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.2rem; flex-wrap: wrap; gap: 1.6rem;">
+          <div>
+            <p class="pk-heading__eyebrow" style="margin: 0 0 0.6rem; color: #E11D48; font-weight: 700; text-transform: uppercase; font-size: 1.3rem;">Most Loved Builds</p>
+            <h2 style="font-size: 3rem; font-weight: 900; margin: 0; color: #0F172A;">Track & Street Champions</h2>
+          </div>
+          <a href="/shop.html" class="btn-secondary" style="color: #0F172A; border-color: #CBD5E1; background: #F8FAFC;">
+            <span>View All 11 Builds</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <pickle-slider class="pk-slider">
+          <ul class="pk-slider__track" data-track tabindex="0" aria-label="Most Loved Builds" style="--pk-slide-width: 32rem;">
+            <!-- Card 1: Aventador SVJ -->
+            <li data-item>
+              <div class="pk-card">
+                <div class="pk-card__media-wrap">
+                  <span class="pk-card__badge">Bestseller</span>
+                  <div class="pk-card__specs-row">
+                    <span class="pk-card__spec-pill">1,698 pcs</span>
+                    <span class="pk-card__spec-pill">1:14 Scale</span>
+                    <span class="pk-card__spec-pill">V12 Engine</span>
+                  </div>
+                  <img src="/img/products/lamborghini-aventador-svj.png" alt="Lamborghini Aventador SVJ" class="pk-card__img" loading="lazy" />
+                </div>
+                <div class="pk-card__body">
+                  <span class="pk-card__category">Hypercars</span>
+                  <h3 class="pk-card__title">
+                    <a href="/product.html?slug=lamborghini-aventador-svj">Lamborghini Aventador SVJ</a>
+                  </h3>
+                  <div class="pk-card__rating">
+                    <span>★★★★★</span>
+                    <span class="pk-card__rating-count">4.9 (68 reviews)</span>
+                  </div>
+                  <div class="pk-card__price-row">
+                    <span class="pk-card__price">₹3,499</span>
+                    <span class="pk-card__mrp">₹4,299</span>
+                    <span class="pk-card__save">Save ₹800</span>
+                  </div>
+                  <button type="button" class="pk-card__btn" onclick="PickMyBuild.addToCart({ id: 'prod_svj', sku: 'PMB-LAM-SVJ-STD', title: 'Lamborghini Aventador SVJ', price: 3499, mrp: 4299, image_url: '/img/products/lamborghini-aventador-svj.png' })">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                    <span>Add to Bag</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+
+            <!-- Card 2: Skyline R34 -->
+            <li data-item>
+              <div class="pk-card">
+                <div class="pk-card__media-wrap">
+                  <span class="pk-card__badge" style="background: #2563EB;">Trending</span>
+                  <div class="pk-card__specs-row">
+                    <span class="pk-card__spec-pill">1,720 pcs</span>
+                    <span class="pk-card__spec-pill">1:14 Scale</span>
+                    <span class="pk-card__spec-pill">RB26 Twin-Turbo</span>
+                  </div>
+                  <img src="/img/products/nissan-skyline-r34.png" alt="Nissan Skyline GT-R R34" class="pk-card__img" loading="lazy" />
+                </div>
+                <div class="pk-card__body">
+                  <span class="pk-card__category">JDM Classics</span>
+                  <h3 class="pk-card__title">
+                    <a href="/product.html?slug=nissan-skyline-r34">Nissan Skyline GT-R R34 V-Spec</a>
+                  </h3>
+                  <div class="pk-card__rating">
+                    <span>★★★★★</span>
+                    <span class="pk-card__rating-count">5.0 (82 reviews)</span>
+                  </div>
+                  <div class="pk-card__price-row">
+                    <span class="pk-card__price">₹3,699</span>
+                    <span class="pk-card__mrp">₹4,399</span>
+                    <span class="pk-card__save">Save ₹700</span>
+                  </div>
+                  <button type="button" class="pk-card__btn" onclick="PickMyBuild.addToCart({ id: 'prod_r34', sku: 'PMB-NIS-R34-STD', title: 'Nissan Skyline GT-R R34 V-Spec', price: 3699, mrp: 4399, image_url: '/img/products/nissan-skyline-r34.png' })">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                    <span>Add to Bag</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+
+            <!-- Card 3: BMW M4 GT3 -->
+            <li data-item>
+              <div class="pk-card">
+                <div class="pk-card__media-wrap">
+                  <span class="pk-card__badge" style="background: #059669;">Staff Pick</span>
+                  <div class="pk-card__specs-row">
+                    <span class="pk-card__spec-pill">1,580 pcs</span>
+                    <span class="pk-card__spec-pill">1:14 Scale</span>
+                    <span class="pk-card__spec-pill">M Livery</span>
+                  </div>
+                  <img src="/img/products/bmw-m4-gt3.png" alt="BMW M4 GT3" class="pk-card__img" loading="lazy" />
+                </div>
+                <div class="pk-card__body">
+                  <span class="pk-card__category">GT3 Racers</span>
+                  <h3 class="pk-card__title">
+                    <a href="/product.html?slug=bmw-m4-gt3">BMW M4 GT3 Motorsport</a>
+                  </h3>
+                  <div class="pk-card__rating">
+                    <span>★★★★★</span>
+                    <span class="pk-card__rating-count">4.9 (45 reviews)</span>
+                  </div>
+                  <div class="pk-card__price-row">
+                    <span class="pk-card__price">₹3,299</span>
+                    <span class="pk-card__mrp">₹3,999</span>
+                    <span class="pk-card__save">Save ₹700</span>
+                  </div>
+                  <button type="button" class="pk-card__btn" onclick="PickMyBuild.addToCart({ id: 'prod_m4_gt3', sku: 'PMB-BMW-M4G-STD', title: 'BMW M4 GT3 Motorsport', price: 3299, mrp: 3999, image_url: '/img/products/bmw-m4-gt3.png' })">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                    <span>Add to Bag</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+
+            <!-- Card 4: Koenigsegg One:1 -->
+            <li data-item>
+              <div class="pk-card">
+                <div class="pk-card__media-wrap">
+                  <span class="pk-card__badge" style="background: #7C3AED;">Collector</span>
+                  <div class="pk-card__specs-row">
+                    <span class="pk-card__spec-pill">1,980 pcs</span>
+                    <span class="pk-card__spec-pill">1:12 Scale</span>
+                    <span class="pk-card__spec-pill">Synchro Doors</span>
+                  </div>
+                  <img src="/img/products/koenigsegg-one-1.png" alt="Koenigsegg One:1" class="pk-card__img" loading="lazy" />
+                </div>
+                <div class="pk-card__body">
+                  <span class="pk-card__category">Hypercars</span>
+                  <h3 class="pk-card__title">
+                    <a href="/product.html?slug=koenigsegg-one-1">Koenigsegg One:1 Megacar</a>
+                  </h3>
+                  <div class="pk-card__rating">
+                    <span>★★★★★</span>
+                    <span class="pk-card__rating-count">5.0 (39 reviews)</span>
+                  </div>
+                  <div class="pk-card__price-row">
+                    <span class="pk-card__price">₹4,299</span>
+                    <span class="pk-card__mrp">₹5,199</span>
+                    <span class="pk-card__save">Save ₹900</span>
+                  </div>
+                  <button type="button" class="pk-card__btn" onclick="PickMyBuild.addToCart({ id: 'prod_koenigsegg', sku: 'PMB-KOE-ONE-STD', title: 'Koenigsegg One:1 Megacar', price: 4299, mrp: 5199, image_url: '/img/products/koenigsegg-one-1.png' })">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                    <span>Add to Bag</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="pk-slider__controls">
+            <button type="button" class="pk-slider__button" data-prev aria-label="Previous products">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 5-7 7 7 7"/></svg>
+            </button>
+            <button type="button" class="pk-slider__button" data-next aria-label="Next products">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+        </pickle-slider>
+      </div>
+    </section>
+
+    <!-- ==================== 6. ENGINEERING STORY BANNER (pk-story-banner) ==================== -->
+    <section class="pk-section" style="padding: 4rem 0;">
+      <div class="page-width">
+        <div style="background: #0F172A; color: #ffffff; border-radius: var(--pk-radius); padding: 5rem 4rem; display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: center; position: relative; overflow: hidden;">
+          <div style="position: absolute; right: -5rem; top: -5rem; width: 40rem; height: 40rem; background: radial-gradient(circle, rgba(225, 29, 72, 0.25) 0%, transparent 70%); pointer-events: none;"></div>
+          <div style="max-width: 62rem; position: relative; z-index: 2;">
+            <p style="color: #FDA4AF; font-size: 1.35rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 1.2rem;">Precision Engineering In Every Brick</p>
+            <h2 style="font-size: 3.4rem; font-weight: 900; line-height: 1.2; margin: 0 0 2rem; color: #ffffff;">Zero-Compromise Clutch Fit. Real Mechanical Kinematics.</h2>
+            <p style="font-size: 1.6rem; line-height: 1.7; color: #94A3B8; margin: 0 0 2.4rem;">
+              Every PickMyBuild kit is molded with food-grade virgin ABS polymer calibrated to a micrometer tolerance of 0.005mm. No loose pins, no warped chassis panels, and zero missing parts. From functional differential gearboxes that turn when pushed to authentic scissor doors with real pneumatic struts.
+            </p>
+            <div style="display: flex; gap: 3.2rem; flex-wrap: wrap;">
+              <div>
+                <span style="font-size: 2.8rem; font-weight: 900; color: #E11D48; display: block;">100%</span>
+                <span style="font-size: 1.3rem; color: #94A3B8;">Virgin ABS Bricks</span>
+              </div>
+              <div>
+                <span style="font-size: 2.8rem; font-weight: 900; color: #E11D48; display: block;">0.005mm</span>
+                <span style="font-size: 1.3rem; color: #94A3B8;">Clutch Mold Tolerance</span>
+              </div>
+              <div>
+                <span style="font-size: 2.8rem; font-weight: 900; color: #E11D48; display: block;">24h</span>
+                <span style="font-size: 1.3rem; color: #94A3B8;">Missing Part Dispatch</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. CUSTOMER REVIEWS SLIDER (pk-testimonials) ==================== -->
+    <section class="pk-section color-scheme-2" style="padding: 5.6rem 0;">
+      <div class="page-width">
+        <div class="pk-heading pk-heading--center">
+          <p class="pk-heading__eyebrow">Builder Testimonials</p>
+          <h2 class="pk-heading__title">Loved by Petrolheads & Master Builders Across India</h2>
+          <p class="pk-heading__sub">Verified feedback from real living room coffee tables and office setups.</p>
+        </div>
+
+        <pickle-slider class="pk-slider">
+          <ul class="pk-slider__track" data-track tabindex="0" aria-label="Customer Reviews" style="--pk-slide-width: 34rem;">
+            <li data-item>
+              <div style="background: #ffffff; padding: 2.8rem; border-radius: var(--pk-radius); border: 1px solid var(--color-border); box-shadow: var(--pk-shadow); height: 100%; display: flex; flex-direction: column;">
+                <div style="color: #F59E0B; font-size: 1.6rem; margin-bottom: 1.2rem;">★★★★★</div>
+                <p style="font-size: 1.5rem; line-height: 1.6; color: #334155; margin: 0 0 2rem; flex: 1;">
+                  "The Aventador SVJ build took me around 6 hours on a Sunday afternoon. The clutch power is identical to leading Danish brands, and the working V12 pistons inside the clear engine cover look ridiculous on my desk!"
+                </p>
+                <div style="display: flex; align-items: center; gap: 1.2rem; border-top: 1px solid #F1F5F9; padding-top: 1.4rem;">
+                  <div style="width: 4rem; height: 4rem; border-radius: 50%; background: #FFE4E6; color: #E11D48; font-weight: 800; display: flex; align-items: center; justify-content: center;">VK</div>
+                  <div>
+                    <strong style="font-size: 1.45rem; display: block; color: #0F172A;">Varun Krishnamurthy</strong>
+                    <span style="font-size: 1.25rem; color: #10B981;">✓ Verified Builder • Bengaluru</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li data-item>
+              <div style="background: #ffffff; padding: 2.8rem; border-radius: var(--pk-radius); border: 1px solid var(--color-border); box-shadow: var(--pk-shadow); height: 100%; display: flex; flex-direction: column;">
+                <div style="color: #F59E0B; font-size: 1.6rem; margin-bottom: 1.2rem;">★★★★★</div>
+                <p style="font-size: 1.5rem; line-height: 1.6; color: #334155; margin: 0 0 2rem; flex: 1;">
+                  "Being an R34 fanatic, I was skeptical about brick accuracy. But the quad ceramic taillights and RB26 twin-turbo block with blue cam covers are 100% faithful. Arrived in Mumbai in just 2 days."
+                </p>
+                <div style="display: flex; align-items: center; gap: 1.2rem; border-top: 1px solid #F1F5F9; padding-top: 1.4rem;">
+                  <div style="width: 4rem; height: 4rem; border-radius: 50%; background: #EFF6FF; color: #2563EB; font-weight: 800; display: flex; align-items: center; justify-content: center;">AR</div>
+                  <div>
+                    <strong style="font-size: 1.45rem; display: block; color: #0F172A;">Aditya Rao</strong>
+                    <span style="font-size: 1.25rem; color: #10B981;">✓ Verified Builder • Mumbai</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li data-item>
+              <div style="background: #ffffff; padding: 2.8rem; border-radius: var(--pk-radius); border: 1px solid var(--color-border); box-shadow: var(--pk-shadow); height: 100%; display: flex; flex-direction: column;">
+                <div style="color: #F59E0B; font-size: 1.6rem; margin-bottom: 1.2rem;">★★★★★</div>
+                <p style="font-size: 1.5rem; line-height: 1.6; color: #334155; margin: 0 0 2rem; flex: 1;">
+                  "I had one tiny clip piece missing in bag 3. I texted their WhatsApp support at 10 PM, and they air-couriered the replacement the next morning with zero charge. That's real customer commitment!"
+                </p>
+                <div style="display: flex; align-items: center; gap: 1.2rem; border-top: 1px solid #F1F5F9; padding-top: 1.4rem;">
+                  <div style="width: 4rem; height: 4rem; border-radius: 50%; background: #ECFDF5; color: #059669; font-weight: 800; display: flex; align-items: center; justify-content: center;">RM</div>
+                  <div>
+                    <strong style="font-size: 1.45rem; display: block; color: #0F172A;">Rohan Mehta</strong>
+                    <span style="font-size: 1.25rem; color: #10B981;">✓ Verified Builder • New Delhi</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li data-item>
+              <div style="background: #ffffff; padding: 2.8rem; border-radius: var(--pk-radius); border: 1px solid var(--color-border); box-shadow: var(--pk-shadow); height: 100%; display: flex; flex-direction: column;">
+                <div style="color: #F59E0B; font-size: 1.6rem; margin-bottom: 1.2rem;">★★★★★</div>
+                <p style="font-size: 1.5rem; line-height: 1.6; color: #334155; margin: 0 0 2rem; flex: 1;">
+                  "The Koenigsegg One:1 dihedral synchro doors actually rotate 90 degrees outward and slide up just like the real Swedish hypercar. The acrylic display plaque makes it look like an art piece."
+                </p>
+                <div style="display: flex; align-items: center; gap: 1.2rem; border-top: 1px solid #F1F5F9; padding-top: 1.4rem;">
+                  <div style="width: 4rem; height: 4rem; border-radius: 50%; background: #FAF5FF; color: #7C3AED; font-weight: 800; display: flex; align-items: center; justify-content: center;">SN</div>
+                  <div>
+                    <strong style="font-size: 1.45rem; display: block; color: #0F172A;">Siddharth Nair</strong>
+                    <span style="font-size: 1.25rem; color: #10B981;">✓ Verified Builder • Kochi</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="pk-slider__controls">
+            <button type="button" class="pk-slider__button" data-prev aria-label="Previous reviews">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 5-7 7 7 7"/></svg>
+            </button>
+            <button type="button" class="pk-slider__button" data-next aria-label="Next reviews">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+        </pickle-slider>
+      </div>
+    </section>
+
+    <!-- ==================== 8. BUNDLE SAVINGS SHOWCASE (pk-product-showcase) ==================== -->
+    <section class="pk-section" style="padding: 5.6rem 0;">
+      <div class="page-width">
+        <div class="pk-heading pk-heading--center">
+          <p class="pk-heading__eyebrow">Display Bundles</p>
+          <h2 class="pk-heading__title">Multi-Car Garage Bundles that Save More</h2>
+          <p class="pk-heading__sub">Pair legendary rival cars and save up to ₹1,000 on dual display sets.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr)); gap: 2.4rem;">
+          <!-- Bundle 1 -->
+          <div class="pk-card" style="border: 2px solid #E11D48;">
+            <div class="pk-card__media-wrap" style="padding-top: 55%; background: linear-gradient(135deg, #FFF1F2 0%, #FFE4E6 100%);">
+              <span class="pk-card__badge">Save ₹999</span>
+              <img src="/img/products/bmw-m4-gt3.png" alt="Nürburgring GT3 Duo" class="pk-card__img" style="width: 70%; left: 15%;" loading="lazy" />
+            </div>
+            <div class="pk-card__body">
+              <span class="pk-card__category">Track Pack</span>
+              <h3 class="pk-card__title">Nürburgring GT3 Duo (BMW M4 GT3 + Audi R8 LMS)</h3>
+              <p style="font-size: 1.35rem; color: #64748B; margin: 0 0 1.2rem;">3,200 total pieces. Dual competition GT3 endurance racers with acrylic side-by-side stands.</p>
+              <div class="pk-card__price-row">
+                <span class="pk-card__price">₹5,799</span>
+                <span class="pk-card__mrp">₹6,798</span>
+                <span class="pk-card__save">Save ₹999 (15% OFF)</span>
+              </div>
+              <button type="button" class="pk-card__btn" onclick="PickMyBuild.addToCart({ id: 'bundle_gt3', sku: 'BND-GT3-DUO', title: 'Nürburgring GT3 Duo Bundle', price: 5799, mrp: 6798, image_url: '/img/products/bmw-m4-gt3.png' })">
+                <span>Add Dual Bundle to Bag</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Bundle 2 -->
+          <div class="pk-card" style="border: 2px solid #2563EB;">
+            <div class="pk-card__media-wrap" style="padding-top: 55%; background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);">
+              <span class="pk-card__badge" style="background: #2563EB;">Save ₹999</span>
+              <img src="/img/products/nissan-skyline-r34.png" alt="JDM Heritage Twin Pack" class="pk-card__img" style="width: 70%; left: 15%;" loading="lazy" />
+            </div>
+            <div class="pk-card__body">
+              <span class="pk-card__category">JDM Legends</span>
+              <h3 class="pk-card__title">JDM Heritage Twin Pack (Skyline R34 + RX-7 FD)</h3>
+              <p style="font-size: 1.35rem; color: #64748B; margin: 0 0 1.2rem;">3,100 total pieces. Legendary twin-turbo RB26 meets twin-rotor 13B Wankel engineering.</p>
+              <div class="pk-card__price-row">
+                <span class="pk-card__price">₹5,599</span>
+                <span class="pk-card__mrp">₹6,598</span>
+                <span class="pk-card__save">Save ₹999 (15% OFF)</span>
+              </div>
+              <button type="button" class="pk-card__btn" onclick="PickMyBuild.addToCart({ id: 'bundle_jdm', sku: 'BND-JDM-TWIN', title: 'JDM Heritage Twin Pack Bundle', price: 5599, mrp: 6598, image_url: '/img/products/nissan-skyline-r34.png' })">
+                <span>Add Dual Bundle to Bag</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Bundle 3 -->
+          <div class="pk-card" style="border: 2px solid #7C3AED;">
+            <div class="pk-card__media-wrap" style="padding-top: 55%; background: linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%);">
+              <span class="pk-card__badge" style="background: #7C3AED;">Save ₹999</span>
+              <img src="/img/products/koenigsegg-one-1.png" alt="Apex Hypercar Showcase" class="pk-card__img" style="width: 70%; left: 15%;" loading="lazy" />
+            </div>
+            <div class="pk-card__body">
+              <span class="pk-card__category">Hypercar Apex</span>
+              <h3 class="pk-card__title">Apex Hypercar Showcase (Aventador SVJ + Koenigsegg)</h3>
+              <p style="font-size: 1.35rem; color: #64748B; margin: 0 0 1.2rem;">3,678 total pieces. Naturally aspirated Italian V12 monster meets 1 Megawatt Swedish aero.</p>
+              <div class="pk-card__price-row">
+                <span class="pk-card__price">₹6,799</span>
+                <span class="pk-card__mrp">₹7,798</span>
+                <span class="pk-card__save">Save ₹999 (13% OFF)</span>
+              </div>
+              <button type="button" class="pk-card__btn" onclick="PickMyBuild.addToCart({ id: 'bundle_apex', sku: 'BND-APEX-SHOW', title: 'Apex Hypercar Showcase Bundle', price: 6799, mrp: 7798, image_url: '/img/products/koenigsegg-one-1.png' })">
+                <span>Add Dual Bundle to Bag</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 9. 9:16 VERTICAL VIDEO REELS SECTION (pk-video-reels) ==================== -->
+    <section class="pk-section" id="video-reels" style="padding: 5.6rem 0; background: #0F172A; color: #ffffff;">
+      <div class="page-width">
+        <div class="pk-heading pk-heading--center" style="margin-bottom: 3.6rem;">
+          <p class="pk-heading__eyebrow" style="color: #FDA4AF;">Garage Moments & Builds</p>
+          <h2 class="pk-heading__title" style="color: #ffffff;">In Action on Living Room Tracks</h2>
+          <p class="pk-heading__sub" style="color: #94A3B8;">Short vertical clips of functional aerodynamics, engine revs, and assembly moments.</p>
+        </div>
+
+        <pickle-slider class="pk-slider">
+          <ul class="pk-slider__track pk-reels" data-track tabindex="0" aria-label="Supercar Build Video Reels">
+            <!-- Reel 1: Aventador SVJ -->
+            <li class="pk-reels__item" data-item>
+              <pickle-reel class="pk-reel">
+                <div class="pk-reel__media">
+                  <video src="/media/reels/reel-1.mp4" loop muted playsinline preload="metadata" class="pk-reel__video"></video>
+                  <button type="button" class="pk-reel__sound" data-sound aria-pressed="false" aria-label="Toggle reel audio">
+                    <span class="pk-reel__sound-off">
+                      <svg class="pk-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="m17 9 4 6M21 9l-4 6"/></svg>
+                    </span>
+                    <span class="pk-reel__sound-on">
+                      <svg class="pk-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="pk-reel__footer">
+                  <p class="pk-reel__caption">Aventador SVJ active aero wing test 🔥</p>
+                  <a href="/product.html?slug=lamborghini-aventador-svj" class="pk-reel__product">
+                    <img src="/img/products/lamborghini-aventador-svj.png" alt="Aventador SVJ" width="40" height="40" loading="lazy" />
+                    <span>
+                      <span class="pk-reel__product-title">Lamborghini Aventador SVJ</span>
+                      <span class="pk-reel__product-price">₹3,499</span>
+                    </span>
+                  </a>
+                </div>
+              </pickle-reel>
+            </li>
+
+            <!-- Reel 2: Skyline R34 -->
+            <li class="pk-reels__item" data-item>
+              <pickle-reel class="pk-reel">
+                <div class="pk-reel__media">
+                  <video src="/media/reels/reel-2.mp4" loop muted playsinline preload="metadata" class="pk-reel__video"></video>
+                  <button type="button" class="pk-reel__sound" data-sound aria-pressed="false" aria-label="Toggle reel audio">
+                    <span class="pk-reel__sound-off">
+                      <svg class="pk-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="m17 9 4 6M21 9l-4 6"/></svg>
+                    </span>
+                    <span class="pk-reel__sound-on">
+                      <svg class="pk-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="pk-reel__footer">
+                  <p class="pk-reel__caption">Godzilla RB26DETT twin-turbo fitting 🏎️💨</p>
+                  <a href="/product.html?slug=nissan-skyline-r34" class="pk-reel__product">
+                    <img src="/img/products/nissan-skyline-r34.png" alt="Skyline R34" width="40" height="40" loading="lazy" />
+                    <span>
+                      <span class="pk-reel__product-title">Nissan Skyline GT-R R34</span>
+                      <span class="pk-reel__product-price">₹3,699</span>
+                    </span>
+                  </a>
+                </div>
+              </pickle-reel>
+            </li>
+
+            <!-- Reel 3: BMW M4 GT3 -->
+            <li class="pk-reels__item" data-item>
+              <pickle-reel class="pk-reel">
+                <div class="pk-reel__media">
+                  <video src="/media/reels/reel-3.mp4" loop muted playsinline preload="metadata" class="pk-reel__video"></video>
+                  <button type="button" class="pk-reel__sound" data-sound aria-pressed="false" aria-label="Toggle reel audio">
+                    <span class="pk-reel__sound-off">
+                      <svg class="pk-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="m17 9 4 6M21 9l-4 6"/></svg>
+                    </span>
+                    <span class="pk-reel__sound-on">
+                      <svg class="pk-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="pk-reel__footer">
+                  <p class="pk-reel__caption">M4 GT3 widebody track aero assembled 🏁</p>
+                  <a href="/product.html?slug=bmw-m4-gt3" class="pk-reel__product">
+                    <img src="/img/products/bmw-m4-gt3.png" alt="BMW M4 GT3" width="40" height="40" loading="lazy" />
+                    <span>
+                      <span class="pk-reel__product-title">BMW M4 GT3 Motorsport</span>
+                      <span class="pk-reel__product-price">₹3,299</span>
+                    </span>
+                  </a>
+                </div>
+              </pickle-reel>
+            </li>
+
+            <!-- Reel 4: Koenigsegg One:1 -->
+            <li class="pk-reels__item" data-item>
+              <pickle-reel class="pk-reel">
+                <div class="pk-reel__media">
+                  <video src="/media/reels/reel-4.mp4" loop muted playsinline preload="metadata" class="pk-reel__video"></video>
+                  <button type="button" class="pk-reel__sound" data-sound aria-pressed="false" aria-label="Toggle reel audio">
+                    <span class="pk-reel__sound-off">
+                      <svg class="pk-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="m17 9 4 6M21 9l-4 6"/></svg>
+                    </span>
+                    <span class="pk-reel__sound-on">
+                      <svg class="pk-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="pk-reel__footer">
+                  <p class="pk-reel__caption">Dihedral synchro doors opening test 🚀</p>
+                  <a href="/product.html?slug=koenigsegg-one-1" class="pk-reel__product">
+                    <img src="/img/products/koenigsegg-one-1.png" alt="Koenigsegg One:1" width="40" height="40" loading="lazy" />
+                    <span>
+                      <span class="pk-reel__product-title">Koenigsegg One:1 Megacar</span>
+                      <span class="pk-reel__product-price">₹4,299</span>
+                    </span>
+                  </a>
+                </div>
+              </pickle-reel>
+            </li>
+
+            <!-- Reel 5: Mazda RX-7 FD -->
+            <li class="pk-reels__item" data-item>
+              <pickle-reel class="pk-reel">
+                <div class="pk-reel__media">
+                  <video src="/media/reels/reel-5.mp4" loop muted playsinline preload="metadata" class="pk-reel__video"></video>
+                  <button type="button" class="pk-reel__sound" data-sound aria-pressed="false" aria-label="Toggle reel audio">
+                    <span class="pk-reel__sound-off">
+                      <svg class="pk-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="m17 9 4 6M21 9l-4 6"/></svg>
+                    </span>
+                    <span class="pk-reel__sound-on">
+                      <svg class="pk-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="pk-reel__footer">
+                  <p class="pk-reel__caption">Pop-up headlights & spinning 13B rotor ⚡</p>
+                  <a href="/product.html?slug=mazda-rx7-fd" class="pk-reel__product">
+                    <img src="/img/products/mazda-rx7-fd.png" alt="Mazda RX-7 FD" width="40" height="40" loading="lazy" />
+                    <span>
+                      <span class="pk-reel__product-title">Mazda RX-7 FD Spirit R</span>
+                      <span class="pk-reel__product-price">₹2,899</span>
+                    </span>
+                  </a>
+                </div>
+              </pickle-reel>
+            </li>
+          </ul>
+          <div class="pk-slider__controls">
+            <button type="button" class="pk-slider__button" data-prev aria-label="Previous reels" style="background: rgba(255,255,255,0.15); color: #fff;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 5-7 7 7 7"/></svg>
+            </button>
+            <button type="button" class="pk-slider__button" data-next aria-label="Next reels" style="background: rgba(255,255,255,0.15); color: #fff;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+        </pickle-slider>
+      </div>
+    </section>
+
+    <!-- ==================== 10. 6 TRUST BADGES (pk-trust-badges) ==================== -->
+    <section class="pk-section" style="padding: 5.6rem 0;">
+      <div class="page-width">
+        <div class="pk-heading pk-heading--center">
+          <p class="pk-heading__eyebrow">The PickMyBuild Standard</p>
+          <h2 class="pk-heading__title">Engineering You Can Trust</h2>
+          <p class="pk-heading__sub">Rigorous quality standards backing every clutch element and gearbox pin.</p>
+        </div>
+
+        <ul class="pk-badges" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 2rem; list-style: none; padding: 0; margin: 0;">
+          <li style="background: #F8FAFC; padding: 2.4rem 1.6rem; border-radius: var(--pk-radius); text-align: center; border: 1px solid var(--color-border);">
+            <div style="font-size: 2.8rem; margin-bottom: 1rem;">🛡️</div>
+            <h4 style="font-size: 1.5rem; font-weight: 800; margin: 0 0 0.5rem;">Virgin ABS Plastic</h4>
+            <p style="font-size: 1.25rem; color: #64748B; margin: 0;">100% burr-free high-impact food-grade polymer.</p>
+          </li>
+          <li style="background: #F8FAFC; padding: 2.4rem 1.6rem; border-radius: var(--pk-radius); text-align: center; border: 1px solid var(--color-border);">
+            <div style="font-size: 2.8rem; margin-bottom: 1rem;">⚡</div>
+            <h4 style="font-size: 1.5rem; font-weight: 800; margin: 0 0 0.5rem;">Zero Missing Parts</h4>
+            <p style="font-size: 1.25rem; color: #64748B; margin: 0;">Free 24h air courier dispatch if any brick is missing.</p>
+          </li>
+          <li style="background: #F8FAFC; padding: 2.4rem 1.6rem; border-radius: var(--pk-radius); text-align: center; border: 1px solid var(--color-border);">
+            <div style="font-size: 2.8rem; margin-bottom: 1rem;">📖</div>
+            <h4 style="font-size: 1.5rem; font-weight: 800; margin: 0 0 0.5rem;">Full-Color 3D Manual</h4>
+            <p style="font-size: 1.25rem; color: #64748B; margin: 0;">Step-by-step printed physical building guide included.</p>
+          </li>
+          <li style="background: #F8FAFC; padding: 2.4rem 1.6rem; border-radius: var(--pk-radius); text-align: center; border: 1px solid var(--color-border);">
+            <div style="font-size: 2.8rem; margin-bottom: 1rem;">🧩</div>
+            <h4 style="font-size: 1.5rem; font-weight: 800; margin: 0 0 0.5rem;">Universal Fit</h4>
+            <p style="font-size: 1.25rem; color: #64748B; margin: 0;">100% clutch compatible with all leading brick brands.</p>
+          </li>
+          <li style="background: #F8FAFC; padding: 2.4rem 1.6rem; border-radius: var(--pk-radius); text-align: center; border: 1px solid var(--color-border);">
+            <div style="font-size: 2.8rem; margin-bottom: 1rem;">📦</div>
+            <h4 style="font-size: 1.5rem; font-weight: 800; margin: 0 0 0.5rem;">Collector Packaging</h4>
+            <p style="font-size: 1.25rem; color: #64748B; margin: 0;">Multi-layered shockproof box ready for gifting.</p>
+          </li>
+          <li style="background: #F8FAFC; padding: 2.4rem 1.6rem; border-radius: var(--pk-radius); text-align: center; border: 1px solid var(--color-border);">
+            <div style="font-size: 2.8rem; margin-bottom: 1rem;">✈️</div>
+            <h4 style="font-size: 1.5rem; font-weight: 800; margin: 0 0 0.5rem;">BlueDart Air Express</h4>
+            <p style="font-size: 1.25rem; color: #64748B; margin: 0;">2-3 day door delivery across all Indian pincodes.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== 11. MARKETPLACES GRID (pk-marketplaces) ==================== -->
+    <section class="pk-section color-scheme-2" style="padding: 4rem 0;">
+      <div class="page-width" style="text-align: center;">
+        <p style="font-size: 1.3rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #64748B; margin: 0 0 2rem;">Also Available On Official Partner Marketplaces</p>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 4rem; flex-wrap: wrap; opacity: 0.75; font-weight: 800; font-size: 1.8rem; color: #334155;">
+          <span>amazon.in</span>
+          <span>Flipkart</span>
+          <span>blinkit</span>
+          <span>Zepto</span>
+          <span>swiggy instamart</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 12. ACCORDION FAQ (pk-faq) ==================== -->
+    <section class="pk-section" style="padding: 5.6rem 0;">
+      <div class="page-width pk-narrow">
+        <div class="pk-heading pk-heading--center">
+          <p class="pk-heading__eyebrow">Frequently Asked Questions</p>
+          <h2 class="pk-heading__title">Everything You Need to Know</h2>
+          <p class="pk-heading__sub">Quick answers to build times, compatibility, and Indian delivery.</p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 1.4rem;">
+          <details style="background: #F8FAFC; border: 1px solid var(--color-border); border-radius: 1.2rem; padding: 1.8rem; cursor: pointer;">
+            <summary style="font-size: 1.6rem; font-weight: 800; color: #0F172A; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>Are these compatible with standard Lego bricks?</span>
+              <span style="font-size: 1.8rem;">+</span>
+            </summary>
+            <p style="margin: 1.2rem 0 0; font-size: 1.45rem; line-height: 1.6; color: #475569;">
+              Yes, 100%. All PickMyBuild bricks, axles, pins, and gear teeth are engineered to standard international clutch pitch specifications (0.005mm tolerance) and interface seamlessly with all major brick brands.
+            </p>
+          </details>
+
+          <details style="background: #F8FAFC; border: 1px solid var(--color-border); border-radius: 1.2rem; padding: 1.8rem; cursor: pointer;">
+            <summary style="font-size: 1.6rem; font-weight: 800; color: #0F172A; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>What happens if a piece is missing in my box?</span>
+              <span style="font-size: 1.8rem;">+</span>
+            </summary>
+            <p style="margin: 1.2rem 0 0; font-size: 1.45rem; line-height: 1.6; color: #475569;">
+              We have a Zero Missing Parts Pledge. Simply take a photo of the manual step where the piece is required and message our builder WhatsApp helpline. We dispatch the exact replacement brick via express air courier within 24 hours at zero cost to you.
+            </p>
+          </details>
+
+          <details style="background: #F8FAFC; border: 1px solid var(--color-border); border-radius: 1.2rem; padding: 1.8rem; cursor: pointer;">
+            <summary style="font-size: 1.6rem; font-weight: 800; color: #0F172A; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>How long does each supercar take to build?</span>
+              <span style="font-size: 1.8rem;">+</span>
+            </summary>
+            <p style="margin: 1.2rem 0 0; font-size: 1.45rem; line-height: 1.6; color: #475569;">
+              Intermediate kits (1,300 - 1,450 pcs) take approximately 3 to 4 hours. Advanced kits (1,500 - 1,750 pcs) take 5 to 7 hours. The Master edition Koenigsegg One:1 (1,980 pcs) takes 7 to 9 hours of rewarding assembly.
+            </p>
+          </details>
+
+          <details style="background: #F8FAFC; border: 1px solid var(--color-border); border-radius: 1.2rem; padding: 1.8rem; cursor: pointer;">
+            <summary style="font-size: 1.6rem; font-weight: 800; color: #0F172A; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>Do you offer Cash on Delivery (COD) across India?</span>
+              <span style="font-size: 1.8rem;">+</span>
+            </summary>
+            <p style="margin: 1.2rem 0 0; font-size: 1.45rem; line-height: 1.6; color: #475569;">
+              Yes! Cash on Delivery is available across 19,000+ Indian postal codes on orders up to ₹5,000 with a nominal ₹49 COD processing fee. We also accept instant UPI (Google Pay, PhonePe, Paytm, BHIM) with zero fees and express priority packing.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 13. NEWSLETTER BANNER (pk-newsletter) ==================== -->
+    <section class="pk-section" style="padding: 4rem 0;">
+      <div class="page-width">
+        <div style="background: #E11D48; color: #ffffff; border-radius: var(--pk-radius); padding: 5rem 3rem; text-align: center; box-shadow: 0 12px 36px rgba(225, 29, 72, 0.3);">
+          <span style="font-size: 1.3rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; background: rgba(255,255,255,0.2); padding: 0.5rem 1.4rem; border-radius: 10rem;">VIP Builder Club</span>
+          <h2 style="font-size: 3.2rem; font-weight: 900; margin: 1.6rem 0 0.8rem; color: #ffffff;">Get ₹200 OFF Your First Build</h2>
+          <p style="font-size: 1.6rem; max-width: 52rem; margin: 0 auto 2.8rem; opacity: 0.9;">Subscribe to receive secret discount drops, restock alerts for limited editions, and VIP launch invites.</p>
+          <form style="display: flex; justify-content: center; gap: 1rem; max-width: 48rem; margin: 0 auto; flex-wrap: wrap;" onsubmit="event.preventDefault(); alert('Coupon BRICK200 unlocked! Use at checkout for ₹200 off.');">
+            <input type="email" placeholder="Enter your email address" required style="flex: 1; min-width: 24rem; padding: 1.3rem 2rem; border-radius: 10rem; border: none; font-size: 1.5rem; outline: none;" />
+            <button type="submit" style="padding: 1.3rem 2.8rem; border-radius: 10rem; background: #0F172A; color: #ffffff; border: none; font-weight: 800; font-size: 1.5rem; cursor: pointer;">Unlock ₹200</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 14. CONTACT DETAILS (pk-contact-details) ==================== -->
+    <section class="pk-section color-scheme-2" style="padding: 4rem 0;">
+      <div class="page-width">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr)); gap: 2.4rem;">
+          <div style="background: #ffffff; padding: 2.4rem; border-radius: var(--pk-radius); border: 1px solid var(--color-border);">
+            <div style="font-size: 2.4rem; margin-bottom: 0.8rem;">💬</div>
+            <h4 style="font-size: 1.6rem; font-weight: 800; margin: 0 0 0.4rem;">WhatsApp Builder Support</h4>
+            <p style="font-size: 1.35rem; color: #64748B; margin: 0 0 1rem;">Direct line for assembly doubts & missing piece dispatches.</p>
+            <a href="https://wa.me/919061902295?text=Hi%20PickMyBuild%20team,%20I%20have%20a%20question%20about%20a%20supercar%20build" target="_blank" style="color: #E11D48; font-weight: 700; font-size: 1.4rem;">+91 90619 02295 →</a>
+          </div>
+
+          <div style="background: #ffffff; padding: 2.4rem; border-radius: var(--pk-radius); border: 1px solid var(--color-border);">
+            <div style="font-size: 2.4rem; margin-bottom: 0.8rem;">✉️</div>
+            <h4 style="font-size: 1.6rem; font-weight: 800; margin: 0 0 0.4rem;">Email Operations</h4>
+            <p style="font-size: 1.35rem; color: #64748B; margin: 0 0 1rem;">Order inquiries, bulk corporate orders & showroom queries.</p>
+            <a href="mailto:support@pickmybuild.in" style="color: #E11D48; font-weight: 700; font-size: 1.4rem;">support@pickmybuild.in →</a>
+          </div>
+
+          <div style="background: #ffffff; padding: 2.4rem; border-radius: var(--pk-radius); border: 1px solid var(--color-border);">
+            <div style="font-size: 2.4rem; margin-bottom: 0.8rem;">📍</div>
+            <h4 style="font-size: 1.6rem; font-weight: 800; margin: 0 0 0.4rem;">National Fulfillment Hub</h4>
+            <p style="font-size: 1.35rem; color: #64748B; margin: 0 0 1rem;">PickMyBuild Brickworks, Central Logistics Hub, Panampilly Nagar, Kochi, Kerala - 682001.</p>
+            <span style="font-size: 1.3rem; color: #10B981; font-weight: 700;">● Air Dispatch Active</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="page-width">
+      <div class="site-footer__grid">
+        <div>
+          <h3 class="site-footer__brand-title">PickMyBuild</h3>
+          <p class="site-footer__tagline">Precision 1:14 and 1:8 scale brick supercars, hypercars, and endurance race kits. Engineered with authentic kinematics and display-grade craftsmanship.</p>
+          <div style="display: flex; gap: 1.4rem; color: #94A3B8;">
+            <span>Instagram</span>
+            <span>YouTube</span>
+            <span>Twitter / X</span>
+            <span>Discord</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="site-footer__col-title">Garage</h4>
+          <ul class="site-footer__links">
+            <li><a href="/shop.html?category=Hypercars" class="site-footer__link">Hypercars</a></li>
+            <li><a href="/shop.html?category=JDM+Classics" class="site-footer__link">JDM Icons</a></li>
+            <li><a href="/shop.html?category=GT3+Racers" class="site-footer__link">GT3 Motorsport</a></li>
+            <li><a href="/shop.html?category=Muscle+Legends" class="site-footer__link">Muscle Cars</a></li>
+            <li><a href="/shop.html?category=Off-Road+4x4" class="site-footer__link">Off-Road 4x4</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="site-footer__col-title">Assurance</h4>
+          <ul class="site-footer__links">
+            <li><a href="#how-to-enjoy" class="site-footer__link">Build Guide</a></li>
+            <li><a href="#video-reels" class="site-footer__link">Video Reels</a></li>
+            <li><a href="/track.html" class="site-footer__link">Track Order</a></li>
+            <li><a href="#" class="site-footer__link">Missing Piece Support</a></li>
+            <li><a href="#" class="site-footer__link">Returns & Refunds</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="site-footer__col-title">Store Ops</h4>
+          <ul class="site-footer__links">
+            <li><a href="/admin.html" class="site-footer__link">Store Owner Console</a></li>
+            <li><a href="/checkout.html" class="site-footer__link">Secure Checkout</a></li>
+            <li><a href="https://tpl-00-agency-showcase-hub.pages.dev" class="site-footer__link">Agency Arsenal Hub</a></li>
+            <li><span class="site-footer__link" style="color: #10B981;">Cloudflare V8 Edge $0/mo</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <div>© 2026 PickMyBuild Brickworks D2C. All rights reserved. 100% Clutch Compatible.</div>
+        <div>Crafted with Pickle Architecture • Cloudflare Pages + D1 SQLite</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== SLIDE-OUT BAG DRAWER ==================== -->
+  <div class="cart-drawer-backdrop" id="cart-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Bag">
+    <div class="cart-drawer__header">
+      <h3 class="cart-drawer__title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span>Your Build Bag</span>
+      </h3>
+      <button type="button" class="cart-drawer__close" data-close-cart aria-label="Close bag">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="cart-free-shipping-bar">
+      <div id="cart-free-shipping-text">Add <strong>₹999</strong> more for <strong>FREE Express Shipping</strong></div>
+      <div class="cart-free-shipping-progress">
+        <div class="cart-free-shipping-progress__fill" id="cart-free-shipping-fill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <div class="cart-drawer__items" id="cart-drawer-items">
+      <!-- Items dynamically populated by common.js -->
+    </div>
+
+    <div class="cart-drawer__footer">
+      <div class="cart-subtotal-row">
+        <span class="cart-subtotal-label">Subtotal</span>
+        <span class="cart-subtotal-val" id="cart-drawer-subtotal">₹0</span>
+      </div>
+      <p style="font-size: 1.25rem; color: #64748B; margin: 0 0 1.6rem;">Taxes and shipping calculated at checkout. COD & Instant UPI accepted.</p>
+      <a href="/checkout.html" class="btn-checkout" id="cart-drawer-checkout-btn">
+        <span>Proceed to Checkout</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Back to Top Web Component -->
+  <pickle-back-to-top class="pk-back-to-top">
+    <button type="button" aria-label="Back to top" style="position: fixed; bottom: 2rem; right: 2rem; width: 4.4rem; height: 4.4rem; border-radius: 50%; background: #0F172A; color: #ffffff; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 4px 16px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; z-index: 40; cursor: pointer;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m18 15-6-6-6 6"/></svg>
+    </button>
+  </pickle-back-to-top>
+
+  <script src="/js/pickle.js"></script>
+  <script src="/js/common.js"></script>
+  <script>
+    // Hero Slideshow Switcher
+    let activeSlide = 0;
+    const slides = [document.getElementById('slide-1'), document.getElementById('slide-2')];
+    const dots = document.querySelectorAll('.hero-dot');
+
+    function switchSlide(index) {
+      activeSlide = index;
+      slides.forEach((s, i) => s.classList.toggle('is-active', i === index));
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === index));
+    }
+
+    setInterval(() => {
+      activeSlide = (activeSlide + 1) % slides.length;
+      switchSlide(activeSlide);
+    }, 6000);
+  </script>
+</body>
+</html>

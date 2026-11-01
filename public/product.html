@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supercar Build Details | PickMyBuild</title>
+  <meta name="description" content="Detailed engineering specifications, piece counts, and functioning mechanical features of PickMyBuild supercar kits.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/pickle-sections.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div style="background: #0F172A; color: #FDA4AF; padding: 0.7rem 0; text-align: center; font-size: 1.3rem; font-weight: 700;">
+    🏎️ FREE EXPRESS AIR SHIPPING ACROSS INDIA ON ALL BUILDS OVER ₹999
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="page-width site-header__inner">
+      <a href="/" class="site-logo">
+        <span class="site-logo__mark">P</span>
+        <span>Pick<span>My</span>Build</span>
+      </a>
+
+      <nav class="site-nav">
+        <a href="/" class="site-nav__link">Home</a>
+        <a href="/shop.html" class="site-nav__link">All Supercars</a>
+        <a href="/shop.html?category=Hypercars" class="site-nav__link">Hypercars</a>
+        <a href="/shop.html?category=JDM+Classics" class="site-nav__link">JDM Icons</a>
+        <a href="/track.html" class="site-nav__link">Track Order</a>
+      </nav>
+
+      <div class="site-actions">
+        <button type="button" class="site-action-btn" data-open-cart title="View Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <span class="cart-count-badge" data-cart-count style="display: none;">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding: 3.2rem 0 6rem;" id="product-container">
+    <div class="page-width">
+      <div style="font-size: 1.35rem; color: #64748B; margin-bottom: 2.4rem;">
+        <a href="/" style="color: #64748B;">Home</a> / <a href="/shop.html" style="color: #64748B;">Supercars</a> / <span id="pdp-breadcrumb" style="color: #0F172A; font-weight: 600;">Loading...</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr; gap: 4.8rem; align-items: start;" class="pdp-grid">
+        <!-- Media Gallery -->
+        <div>
+          <div style="background: radial-gradient(circle, #F8FAFC 0%, #E2E8F0 100%); border-radius: 2rem; border: 1px solid var(--color-border); padding: 4rem 2rem; display: flex; align-items: center; justify-content: center; position: relative; min-height: 40rem;">
+            <div style="position: absolute; width: 80%; height: 80%; background: radial-gradient(circle, rgba(225, 29, 72, 0.15) 0%, transparent 70%);"></div>
+            <img src="" id="pdp-image" alt="" style="max-height: 36rem; max-width: 90%; object-fit: contain; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.18)); position: relative; z-index: 2;" />
+          </div>
+          <div style="display: flex; gap: 1.2rem; margin-top: 1.6rem; justify-content: center;">
+            <span class="pk-card__spec-pill" style="background: #0F172A; font-size: 1.25rem; padding: 0.5rem 1.2rem;" id="pdp-spec-pieces">1,698 Pieces</span>
+            <span class="pk-card__spec-pill" style="background: #E11D48; font-size: 1.25rem; padding: 0.5rem 1.2rem;" id="pdp-spec-scale">1:14 Scale</span>
+            <span class="pk-card__spec-pill" style="background: #059669; font-size: 1.25rem; padding: 0.5rem 1.2rem;" id="pdp-spec-diff">Advanced</span>
+          </div>
+        </div>
+
+        <!-- Product Actions & Specs -->
+        <div>
+          <span style="font-size: 1.3rem; font-weight: 800; color: #E11D48; text-transform: uppercase; letter-spacing: 0.08em;" id="pdp-category">Hypercars</span>
+          <h1 style="font-size: 3.4rem; font-weight: 900; line-height: 1.2; margin: 0.8rem 0 1rem; color: #0F172A;" id="pdp-title">Supercar Model</h1>
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+            <span style="color: #F59E0B; font-size: 1.6rem;">★★★★★</span>
+            <span style="font-size: 1.4rem; font-weight: 700; color: #0F172A;" id="pdp-rating">4.9</span>
+            <span style="font-size: 1.35rem; color: #64748B;" id="pdp-reviews">(68 verified builder reviews)</span>
+          </div>
+
+          <p style="font-size: 1.6rem; line-height: 1.6; color: #475569; margin: 0 0 2.4rem;" id="pdp-desc"></p>
+
+          <div style="padding: 2rem; background: #F8FAFC; border-radius: 1.6rem; border: 1px solid var(--color-border); margin-bottom: 2.8rem;">
+            <div style="display: flex; align-items: baseline; gap: 1.2rem; margin-bottom: 0.6rem;">
+              <span style="font-size: 3.2rem; font-weight: 900; color: #0F172A;" id="pdp-price">₹3,499</span>
+              <span style="font-size: 1.8rem; color: #94A3B8; text-decoration: line-through;" id="pdp-mrp">₹4,299</span>
+              <span style="font-size: 1.4rem; font-weight: 800; color: #10B981;" id="pdp-save">Save ₹800 (19% OFF)</span>
+            </div>
+            <div style="font-size: 1.3rem; color: #64748B;">Inclusive of all Indian taxes • Free Air Express Shipping</div>
+
+            <!-- Variant Picker -->
+            <div style="margin-top: 2rem;">
+              <label style="display: block; font-size: 1.35rem; font-weight: 700; color: #0F172A; margin-bottom: 0.8rem;">Select Edition:</label>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;" id="variant-options">
+                <!-- Populated via JS -->
+              </div>
+            </div>
+
+            <!-- Quantity & CTA Buttons -->
+            <div style="display: flex; gap: 1.4rem; margin-top: 2.4rem; flex-wrap: wrap;">
+              <div class="qty-control" style="height: 5rem;">
+                <button type="button" onclick="adjustPDPQty(-1)" style="width: 3.6rem; height: 100%; font-size: 1.8rem;">-</button>
+                <span id="pdp-qty-display" style="width: 4rem; font-size: 1.6rem;">1</span>
+                <button type="button" onclick="adjustPDPQty(1)" style="width: 3.6rem; height: 100%; font-size: 1.8rem;">+</button>
+              </div>
+
+              <button type="button" class="btn-primary" style="flex: 1; min-width: 20rem; height: 5rem; font-size: 1.6rem;" onclick="addCurrentProductToCart()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                <span>Add to Build Bag</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Feature Bullets Accordion -->
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <details open style="background: #ffffff; border: 1px solid var(--color-border); border-radius: 1.2rem; padding: 1.6rem;">
+              <summary style="font-size: 1.55rem; font-weight: 800; cursor: pointer;">Key Mechanical Features</summary>
+              <ul style="margin: 1.2rem 0 0; padding-left: 2rem; font-size: 1.4rem; line-height: 1.8; color: #475569;" id="pdp-features"></ul>
+            </details>
+
+            <details style="background: #ffffff; border: 1px solid var(--color-border); border-radius: 1.2rem; padding: 1.6rem;">
+              <summary style="font-size: 1.55rem; font-weight: 800; cursor: pointer;">Specifications & Dimensions</summary>
+              <div style="margin-top: 1.2rem; font-size: 1.4rem; color: #475569; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;" id="pdp-specs-table"></div>
+            </details>
+
+            <details style="background: #ffffff; border: 1px solid var(--color-border); border-radius: 1.2rem; padding: 1.6rem;">
+              <summary style="font-size: 1.55rem; font-weight: 800; cursor: pointer;">Zero Missing Parts Guarantee</summary>
+              <p style="margin: 1.2rem 0 0; font-size: 1.4rem; line-height: 1.6; color: #475569;">
+                If any brick is missing from your pouches, take a photo of the manual step and WhatsApp our helpline at +91 90619 02295. We air-dispatch the exact replacement piece within 24 hours at zero charge.
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <style>
+    @media screen and (min-width: 900px) {
+      .pdp-grid {
+        grid-template-columns: 1.1fr 1fr;
+      }
+    }
+    .variant-card {
+      padding: 1.4rem;
+      border: 2px solid var(--color-border);
+      border-radius: 1rem;
+      cursor: pointer;
+      background: #ffffff;
+      transition: all 0.15s ease;
+    }
+    .variant-card.is-selected {
+      border-color: #E11D48;
+      background: #FFF1F2;
+    }
+  </style>
+
+  <!-- Slide-Out Bag Drawer -->
+  <div class="cart-drawer-backdrop" id="cart-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer__header">
+      <h3 class="cart-drawer__title"><span>Your Build Bag</span></h3>
+      <button type="button" class="cart-drawer__close" data-close-cart aria-label="Close bag">✕</button>
+    </div>
+    <div class="cart-drawer__items" id="cart-drawer-items"></div>
+    <div class="cart-drawer__footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span id="cart-drawer-subtotal">₹0</span>
+      </div>
+      <a href="/checkout.html" class="btn-checkout">Proceed to Checkout →</a>
+    </div>
+  </aside>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/product.js"></script>
+</body>
+</html>

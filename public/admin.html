@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store Ops Admin Console | PickMyBuild</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/pickle-sections.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body style="background: #0F172A; color: #F8FAFC; min-height: 100vh;">
+
+  <!-- Header -->
+  <header style="background: #1E293B; border-bottom: 1px solid #334155; padding: 1.6rem 0;">
+    <div class="page-width" style="display: flex; align-items: center; justify-content: space-between;">
+      <div style="display: flex; align-items: center; gap: 1.4rem;">
+        <a href="/" class="site-logo" style="color: #ffffff;">
+          <span class="site-logo__mark">P</span>
+          <span>Pick<span style="color: #FDA4AF;">My</span>Build</span>
+        </a>
+        <span style="background: #E11D48; color: #ffffff; font-size: 1.1rem; padding: 0.3rem 0.8rem; border-radius: 0.4rem; font-weight: 800; text-transform: uppercase;">Ops Console</span>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 1.6rem;">
+        <span style="font-size: 1.3rem; color: #10B981; font-weight: 700;">● Cloudflare D1 Edge SQLite</span>
+        <a href="/" class="btn-secondary" style="padding: 0.6rem 1.4rem; font-size: 1.3rem;">View Storefront →</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login Modal Gate -->
+  <div id="admin-login-gate" style="max-width: 42rem; margin: 8rem auto 0; background: #1E293B; border: 1px solid #334155; border-radius: 1.6rem; padding: 3.2rem; box-shadow: 0 20px 40px rgba(0,0,0,0.5); text-align: center;">
+    <div style="width: 5rem; height: 5rem; border-radius: 50%; background: rgba(225, 29, 72, 0.2); color: #FDA4AF; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.6rem; font-size: 2.2rem;">🔒</div>
+    <h2 style="font-size: 2.2rem; font-weight: 800; margin: 0 0 0.8rem; color: #ffffff;">Store Owner Authentication</h2>
+    <p style="font-size: 1.4rem; color: #94A3B8; margin: 0 0 2.4rem;">Enter admin access key to manage orders and stock ledger.</p>
+    <form onsubmit="handleAdminLogin(event)">
+      <input type="password" id="admin-pass-input" placeholder="Enter admin password (admin123)" required style="width: 100%; padding: 1.2rem; border-radius: 0.8rem; border: 1px solid #475569; background: #0F172A; color: #ffffff; font-size: 1.5rem; margin-bottom: 1.6rem; outline: none;" />
+      <button type="submit" class="btn-primary" style="width: 100%; height: 4.6rem;">Unlock Operations</button>
+    </form>
+  </div>
+
+  <!-- Admin Dashboard Container -->
+  <main id="admin-main" style="display: none; padding: 4rem 0 8rem;">
+    <div class="page-width">
+      <!-- Top KPIs -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); gap: 2rem; margin-bottom: 3.6rem;">
+        <div style="background: #1E293B; padding: 2.2rem; border-radius: 1.4rem; border: 1px solid #334155;">
+          <span style="font-size: 1.3rem; color: #94A3B8; text-transform: uppercase; font-weight: 700;">Gross Revenue</span>
+          <div style="font-size: 3rem; font-weight: 900; color: #ffffff; margin-top: 0.4rem;" id="kpi-revenue">₹3,299</div>
+          <span style="font-size: 1.2rem; color: #10B981;">● Real-time D1 orders</span>
+        </div>
+
+        <div style="background: #1E293B; padding: 2.2rem; border-radius: 1.4rem; border: 1px solid #334155;">
+          <span style="font-size: 1.3rem; color: #94A3B8; text-transform: uppercase; font-weight: 700;">Total Orders</span>
+          <div style="font-size: 3rem; font-weight: 900; color: #ffffff; margin-top: 0.4rem;" id="kpi-orders">1</div>
+          <span style="font-size: 1.2rem; color: #60A5FA;">COD & Dynamic UPI</span>
+        </div>
+
+        <div style="background: #1E293B; padding: 2.2rem; border-radius: 1.4rem; border: 1px solid #334155;">
+          <span style="font-size: 1.3rem; color: #94A3B8; text-transform: uppercase; font-weight: 700;">Pending UTR Checks</span>
+          <div style="font-size: 3rem; font-weight: 900; color: #F59E0B; margin-top: 0.4rem;" id="kpi-utr-pending">0</div>
+          <span style="font-size: 1.2rem; color: #F59E0B;">Requires 1-click verification</span>
+        </div>
+
+        <div style="background: #1E293B; padding: 2.2rem; border-radius: 1.4rem; border: 1px solid #334155;">
+          <span style="font-size: 1.3rem; color: #94A3B8; text-transform: uppercase; font-weight: 700;">Active SKU Inventory</span>
+          <div style="font-size: 3rem; font-weight: 900; color: #ffffff; margin-top: 0.4rem;" id="kpi-stock">317</div>
+          <span style="font-size: 1.2rem; color: #A78BFA;">11 Supercar Models</span>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <div style="display: flex; gap: 1rem; border-bottom: 1px solid #334155; margin-bottom: 3.2rem;">
+        <button type="button" class="admin-tab is-active" data-tab="orders" onclick="switchAdminTab('orders')">Orders Manager</button>
+        <button type="button" class="admin-tab" data-tab="inventory" onclick="switchAdminTab('inventory')">SKU Stock Matrix</button>
+        <button type="button" class="admin-tab" data-tab="ledger" onclick="switchAdminTab('ledger')">Immutable Stock Ledger</button>
+      </div>
+
+      <style>
+        .admin-tab {
+          padding: 1.2rem 2.4rem;
+          background: transparent;
+          border: none;
+          color: #94A3B8;
+          font-size: 1.5rem;
+          font-weight: 700;
+          cursor: pointer;
+          border-bottom: 3px solid transparent;
+        }
+        .admin-tab.is-active {
+          color: #ffffff;
+          border-bottom-color: #E11D48;
+        }
+      </style>
+
+      <!-- TAB 1: ORDERS MANAGER -->
+      <div id="tab-orders">
+        <div style="background: #1E293B; border-radius: 1.6rem; border: 1px solid #334155; overflow: hidden;">
+          <div style="padding: 2rem; border-bottom: 1px solid #334155; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <h3 style="margin: 0; font-size: 1.8rem; font-weight: 800;">Recent Store Orders</h3>
+            <button type="button" class="btn-secondary" onclick="loadAdminOrders()" style="font-size: 1.3rem; padding: 0.6rem 1.4rem;">↻ Refresh</button>
+          </div>
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 1.4rem;">
+              <thead>
+                <tr style="background: #0F172A; color: #94A3B8; font-size: 1.25rem; text-transform: uppercase;">
+                  <th style="padding: 1.4rem 2rem;">Order #</th>
+                  <th style="padding: 1.4rem 2rem;">Customer</th>
+                  <th style="padding: 1.4rem 2rem;">Items</th>
+                  <th style="padding: 1.4rem 2rem;">Total</th>
+                  <th style="padding: 1.4rem 2rem;">Payment</th>
+                  <th style="padding: 1.4rem 2rem;">Status</th>
+                  <th style="padding: 1.4rem 2rem; text-align: right;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="admin-orders-tbody">
+                <!-- Orders injected by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: INVENTORY MATRIX -->
+      <div id="tab-inventory" style="display: none;">
+        <div style="background: #1E293B; border-radius: 1.6rem; border: 1px solid #334155; overflow: hidden;">
+          <div style="padding: 2rem; border-bottom: 1px solid #334155; display: flex; justify-content: space-between; align-items: center;">
+            <h3 style="margin: 0; font-size: 1.8rem; font-weight: 800;">Supercar Stock Matrix</h3>
+            <button type="button" class="btn-secondary" onclick="loadAdminInventory()" style="font-size: 1.3rem; padding: 0.6rem 1.4rem;">↻ Refresh</button>
+          </div>
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 1.4rem;">
+              <thead>
+                <tr style="background: #0F172A; color: #94A3B8; font-size: 1.25rem; text-transform: uppercase;">
+                  <th style="padding: 1.4rem 2rem;">Product Title</th>
+                  <th style="padding: 1.4rem 2rem;">Category</th>
+                  <th style="padding: 1.4rem 2rem;">Price</th>
+                  <th style="padding: 1.4rem 2rem;">Stock Units</th>
+                  <th style="padding: 1.4rem 2rem; text-align: right;">Stock Adjustment</th>
+                </tr>
+              </thead>
+              <tbody id="admin-inventory-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: IMMUTABLE STOCK LEDGER -->
+      <div id="tab-ledger" style="display: none;">
+        <div style="background: #1E293B; border-radius: 1.6rem; border: 1px solid #334155; overflow: hidden;">
+          <div style="padding: 2rem; border-bottom: 1px solid #334155; display: flex; justify-content: space-between; align-items: center;">
+            <h3 style="margin: 0; font-size: 1.8rem; font-weight: 800;">Immutable Stock Audit Ledger</h3>
+            <button type="button" class="btn-secondary" onclick="exportLedgerCSV()" style="font-size: 1.3rem; padding: 0.6rem 1.4rem;">⬇ Export CSV</button>
+          </div>
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 1.4rem;">
+              <thead>
+                <tr style="background: #0F172A; color: #94A3B8; font-size: 1.25rem; text-transform: uppercase;">
+                  <th style="padding: 1.4rem 2rem;">Timestamp</th>
+                  <th style="padding: 1.4rem 2rem;">Product / SKU</th>
+                  <th style="padding: 1.4rem 2rem;">Delta</th>
+                  <th style="padding: 1.4rem 2rem;">Reason Code</th>
+                  <th style="padding: 1.4rem 2rem;">Ref ID</th>
+                </tr>
+              </thead>
+              <tbody id="admin-ledger-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Stock Adjust Modal -->
+  <div id="stock-modal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); z-index: 200; align-items: center; justify-content: center; padding: 2rem;">
+    <div style="background: #1E293B; border: 1px solid #334155; border-radius: 1.6rem; padding: 3rem; max-width: 44rem; width: 100%;">
+      <h3 style="font-size: 2rem; font-weight: 800; margin: 0 0 1rem; color: #fff;">Adjust Stock Units</h3>
+      <div id="modal-product-title" style="font-size: 1.45rem; color: #FDA4AF; font-weight: 700; margin-bottom: 1.6rem;">Product</div>
+
+      <div style="display: flex; flex-direction: column; gap: 1.4rem;">
+        <div>
+          <label style="display: block; font-size: 1.3rem; color: #94A3B8; margin-bottom: 0.4rem;">Adjustment Units (+ / -)</label>
+          <input type="number" id="modal-delta-input" placeholder="e.g. 10 or -5" style="width: 100%; padding: 1.1rem; border-radius: 0.8rem; border: 1px solid #475569; background: #0F172A; color: #fff; font-size: 1.5rem;" />
+        </div>
+
+        <div>
+          <label style="display: block; font-size: 1.3rem; color: #94A3B8; margin-bottom: 0.4rem;">Audit Reason Code</label>
+          <select id="modal-reason-select" style="width: 100%; padding: 1.1rem; border-radius: 0.8rem; border: 1px solid #475569; background: #0F172A; color: #fff; font-size: 1.4rem;">
+            <option value="restock">Factory Restock Inward</option>
+            <option value="physical_audit">Physical Inventory Audit Adjustment</option>
+            <option value="damaged_return">Damaged in Transit / Discard</option>
+            <option value="display_sample">Allocated for Exhibition Showcase</option>
+          </select>
+        </div>
+
+        <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+          <button type="button" class="btn-secondary" onclick="closeStockModal()" style="flex: 1;">Cancel</button>
+          <button type="button" class="btn-primary" onclick="submitStockAdjustment()" style="flex: 1;">Save Delta</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>

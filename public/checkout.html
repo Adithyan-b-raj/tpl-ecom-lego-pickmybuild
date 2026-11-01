@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Express Checkout | PickMyBuild</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/pickle-sections.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body style="background: #F8FAFC;">
+
+  <!-- Header -->
+  <header style="background: #ffffff; border-bottom: 1px solid var(--color-border); padding: 1.6rem 0;">
+    <div class="page-width" style="display: flex; align-items: center; justify-content: space-between;">
+      <a href="/" class="site-logo">
+        <span class="site-logo__mark">P</span>
+        <span>Pick<span>My</span>Build</span>
+      </a>
+      <div style="font-size: 1.35rem; color: #10B981; font-weight: 700; display: flex; align-items: center; gap: 0.6rem;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>256-Bit Encrypted Checkout</span>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding: 4rem 0 8rem;">
+    <div class="page-width">
+      <div style="display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: start;" class="checkout-grid">
+
+        <!-- Form Column -->
+        <div style="background: #ffffff; border-radius: 2rem; border: 1px solid var(--color-border); padding: 3.2rem; box-shadow: var(--pk-shadow);">
+          <form id="checkout-form" onsubmit="handlePlaceOrder(event)">
+            <!-- 1. Customer Details -->
+            <div style="margin-bottom: 3.2rem;">
+              <h2 style="font-size: 2rem; font-weight: 800; margin: 0 0 1.6rem; color: #0F172A; display: flex; align-items: center; gap: 1rem;">
+                <span style="width: 2.8rem; height: 2.8rem; border-radius: 50%; background: #0F172A; color: #fff; font-size: 1.4rem; display: inline-flex; align-items: center; justify-content: center;">1</span>
+                <span>Contact & Builder Details</span>
+              </h2>
+
+              <div style="display: grid; grid-template-columns: 1fr; gap: 1.6rem;">
+                <div>
+                  <label style="display: block; font-size: 1.35rem; font-weight: 700; margin-bottom: 0.6rem; color: #334155;">Full Name *</label>
+                  <input type="text" id="cust-name" required placeholder="e.g. Adithyan Raj" style="width: 100%; padding: 1.2rem; border-radius: 0.8rem; border: 1px solid var(--color-border); font-size: 1.45rem;" />
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem;">
+                  <div>
+                    <label style="display: block; font-size: 1.35rem; font-weight: 700; margin-bottom: 0.6rem; color: #334155;">WhatsApp Number *</label>
+                    <input type="tel" id="cust-phone" required placeholder="+91 98765 43210" style="width: 100%; padding: 1.2rem; border-radius: 0.8rem; border: 1px solid var(--color-border); font-size: 1.45rem;" />
+                  </div>
+                  <div>
+                    <label style="display: block; font-size: 1.35rem; font-weight: 700; margin-bottom: 0.6rem; color: #334155;">Email Address</label>
+                    <input type="email" id="cust-email" placeholder="you@domain.com" style="width: 100%; padding: 1.2rem; border-radius: 0.8rem; border: 1px solid var(--color-border); font-size: 1.45rem;" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Shipping Address -->
+            <div style="margin-bottom: 3.2rem;">
+              <h2 style="font-size: 2rem; font-weight: 800; margin: 0 0 1.6rem; color: #0F172A; display: flex; align-items: center; gap: 1rem;">
+                <span style="width: 2.8rem; height: 2.8rem; border-radius: 50%; background: #0F172A; color: #fff; font-size: 1.4rem; display: inline-flex; align-items: center; justify-content: center;">2</span>
+                <span>Delivery Address in India</span>
+              </h2>
+
+              <div style="display: grid; grid-template-columns: 1fr; gap: 1.6rem;">
+                <div>
+                  <label style="display: block; font-size: 1.35rem; font-weight: 700; margin-bottom: 0.6rem; color: #334155;">Street Address, Flat / House No *</label>
+                  <input type="text" id="cust-address" required placeholder="Flat 4B, Emerald Heights, MG Road" style="width: 100%; padding: 1.2rem; border-radius: 0.8rem; border: 1px solid var(--color-border); font-size: 1.45rem;" />
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.4rem;">
+                  <div>
+                    <label style="display: block; font-size: 1.35rem; font-weight: 700; margin-bottom: 0.6rem; color: #334155;">6-Digit Pincode *</label>
+                    <input type="text" id="cust-pincode" required maxlength="6" placeholder="682001" oninput="handlePincodeCheck(this.value)" style="width: 100%; padding: 1.2rem; border-radius: 0.8rem; border: 1px solid var(--color-border); font-size: 1.45rem; font-family: var(--font-mono); font-weight: 700;" />
+                  </div>
+                  <div>
+                    <label style="display: block; font-size: 1.35rem; font-weight: 700; margin-bottom: 0.6rem; color: #334155;">City *</label>
+                    <input type="text" id="cust-city" required placeholder="Kochi" style="width: 100%; padding: 1.2rem; border-radius: 0.8rem; border: 1px solid var(--color-border); font-size: 1.45rem;" />
+                  </div>
+                  <div>
+                    <label style="display: block; font-size: 1.35rem; font-weight: 700; margin-bottom: 0.6rem; color: #334155;">State *</label>
+                    <input type="text" id="cust-state" required placeholder="Kerala" style="width: 100%; padding: 1.2rem; border-radius: 0.8rem; border: 1px solid var(--color-border); font-size: 1.45rem;" />
+                  </div>
+                </div>
+                <div id="pincode-status" style="font-size: 1.3rem; margin-top: -0.8rem;"></div>
+              </div>
+            </div>
+
+            <!-- 3. Payment Method -->
+            <div style="margin-bottom: 3.2rem;">
+              <h2 style="font-size: 2rem; font-weight: 800; margin: 0 0 1.6rem; color: #0F172A; display: flex; align-items: center; gap: 1rem;">
+                <span style="width: 2.8rem; height: 2.8rem; border-radius: 50%; background: #0F172A; color: #fff; font-size: 1.4rem; display: inline-flex; align-items: center; justify-content: center;">3</span>
+                <span>Select Payment Method</span>
+              </h2>
+
+              <div style="display: grid; grid-template-columns: 1fr; gap: 1.4rem;">
+                <!-- Instant UPI Option -->
+                <label style="display: flex; gap: 1.4rem; padding: 1.8rem; border: 2px solid #E11D48; border-radius: 1.2rem; background: #FFF1F2; cursor: pointer;">
+                  <input type="radio" name="payment_method" value="upi" checked onchange="switchPaymentMethod('upi')" style="margin-top: 0.4rem; accent-color: #E11D48;" />
+                  <div>
+                    <div style="font-size: 1.6rem; font-weight: 800; color: #0F172A; display: flex; align-items: center; gap: 1rem;">
+                      <span>Instant Dynamic UPI (Zero Fee)</span>
+                      <span style="background: #10B981; color: #fff; font-size: 1.1rem; padding: 0.2rem 0.6rem; border-radius: 0.4rem; font-weight: 800;">Fastest Dispatch</span>
+                    </div>
+                    <p style="font-size: 1.35rem; color: #475569; margin: 0.4rem 0 0;">Pay via Google Pay, PhonePe, Paytm, BHIM with dynamic SVG QR code and 12-digit UTR verification.</p>
+                  </div>
+                </label>
+
+                <!-- COD Option -->
+                <label style="display: flex; gap: 1.4rem; padding: 1.8rem; border: 1px solid var(--color-border); border-radius: 1.2rem; background: #ffffff; cursor: pointer;">
+                  <input type="radio" name="payment_method" value="cod" onchange="switchPaymentMethod('cod')" style="margin-top: 0.4rem; accent-color: #E11D48;" />
+                  <div>
+                    <div style="font-size: 1.6rem; font-weight: 800; color: #0F172A;">
+                      <span>Cash on Delivery (COD)</span>
+                    </div>
+                    <p style="font-size: 1.35rem; color: #475569; margin: 0.4rem 0 0;">Pay cash or UPI to the BlueDart courier at your doorstep upon delivery. (+₹49 COD fee applies).</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn-checkout" id="submit-order-btn" style="height: 5.6rem; font-size: 1.7rem;">
+              <span>Place Order</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 5 7 7-7 7"/></svg>
+            </button>
+          </form>
+
+          <!-- Dynamic UPI Modal / Container -->
+          <div id="upi-modal" style="display: none; margin-top: 3.2rem; padding: 2.8rem; border-radius: 1.6rem; background: #0F172A; color: #ffffff; text-align: center;">
+            <div style="display: inline-flex; align-items: center; gap: 0.8rem; background: rgba(225, 29, 72, 0.2); padding: 0.6rem 1.4rem; border-radius: 10rem; color: #FDA4AF; font-size: 1.3rem; font-weight: 700; margin-bottom: 1.6rem;">
+              <span id="upi-timer">⏳ 30:00 reservation timer</span>
+            </div>
+            <h3 style="font-size: 2.2rem; font-weight: 900; margin: 0 0 0.8rem; color: #ffffff;">Scan & Pay with Any UPI App</h3>
+            <p style="font-size: 1.4rem; color: #94A3B8; margin: 0 0 2rem;">Scan using GPay, PhonePe, Paytm, or BHIM. Amount: <strong style="color: #ffffff;" id="upi-modal-amount">₹0</strong></p>
+
+            <div id="upi-qr-target" style="display: flex; justify-content: center; margin-bottom: 2rem;"></div>
+
+            <div style="margin-bottom: 2rem;">
+              <a href="#" id="upi-deep-link" class="btn-primary" style="display: inline-flex; background: #2563EB;">
+                <span>Open UPI App on Mobile</span>
+              </a>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 1.2rem; border: 1px solid rgba(255,255,255,0.1); max-width: 44rem; margin: 0 auto; text-align: left;">
+              <label style="display: block; font-size: 1.35rem; font-weight: 700; margin-bottom: 0.6rem; color: #FDA4AF;">Submit 12-Digit Bank UTR / Reference No. *</label>
+              <div style="display: flex; gap: 0.8rem;">
+                <input type="text" id="utr-input" maxlength="12" placeholder="e.g. 431189920154" style="flex: 1; padding: 1.2rem; border-radius: 0.8rem; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.4); color: #fff; font-family: var(--font-mono); font-size: 1.5rem; outline: none;" />
+                <button type="button" class="btn-primary" onclick="submitUTR()" style="white-space: nowrap;">Verify UTR</button>
+              </div>
+              <p style="font-size: 1.2rem; color: #94A3B8; margin: 0.8rem 0 0;">Found in your payment app under "UPI Ref No" or "Transaction ID".</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Order Summary Column -->
+        <div style="background: #ffffff; border-radius: 2rem; border: 1px solid var(--color-border); padding: 3.2rem; box-shadow: var(--pk-shadow); position: sticky; top: 9rem;">
+          <h3 style="font-size: 2rem; font-weight: 800; margin: 0 0 2rem; color: #0F172A;">Order Summary</h3>
+
+          <div id="checkout-items" style="display: flex; flex-direction: column; gap: 1.6rem; margin-bottom: 2.4rem; max-height: 36rem; overflow-y: auto;">
+            <!-- Line items rendered via JS -->
+          </div>
+
+          <!-- Coupon Code Box -->
+          <div style="margin-bottom: 2.4rem;">
+            <div style="display: flex; gap: 0.8rem;">
+              <input type="text" id="coupon-input" placeholder="Coupon Code (e.g. BRICK200)" style="flex: 1; padding: 1.1rem; border-radius: 0.8rem; border: 1px solid var(--color-border); font-size: 1.35rem; text-transform: uppercase;" />
+              <button type="button" class="btn-secondary" onclick="applyCoupon()" style="color: #0F172A; border-color: #CBD5E1; padding: 1rem 1.8rem; font-size: 1.35rem;">Apply</button>
+            </div>
+            <div id="coupon-status" style="font-size: 1.25rem; margin-top: 0.6rem;"></div>
+          </div>
+
+          <!-- Price Breakdown -->
+          <div style="display: flex; flex-direction: column; gap: 1.2rem; border-top: 1px solid var(--color-border); padding-top: 2rem;">
+            <div style="display: flex; justify-content: space-between; font-size: 1.45rem;">
+              <span style="color: #64748B;">Subtotal</span>
+              <span style="font-weight: 700;" id="sum-subtotal">₹0</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 1.45rem;">
+              <span style="color: #64748B;">Express Air Shipping</span>
+              <span style="font-weight: 700; color: #10B981;" id="sum-shipping">FREE</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 1.45rem;" id="cod-fee-row">
+              <span style="color: #64748B;">Cash on Delivery Fee</span>
+              <span style="font-weight: 700;" id="sum-cod">₹0</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 1.45rem; color: #E11D48;" id="discount-row" style="display: none;">
+              <span>Discount</span>
+              <span style="font-weight: 700;" id="sum-discount">-₹0</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 2px dashed var(--color-border); padding-top: 1.6rem; margin-top: 0.4rem;">
+              <span style="font-size: 1.8rem; font-weight: 800;">Total Payable</span>
+              <span style="font-size: 2.6rem; font-weight: 900; color: #0F172A;" id="sum-total">₹0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <style>
+    @media screen and (min-width: 960px) {
+      .checkout-grid {
+        grid-template-columns: 1.4fr 1fr;
+      }
+    }
+  </style>
+
+  <script src="/js/qr.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/checkout.js"></script>
+</body>
+</html>
