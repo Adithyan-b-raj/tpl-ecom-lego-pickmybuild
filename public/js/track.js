@@ -132,7 +132,7 @@ function renderOrderTracking() {
   const evtsContainer = document.getElementById('track-events-timeline');
   evtsContainer.innerHTML = loadedEvents.map(evt => `
     <div style="position: relative;">
-      <div style="position: absolute; left: -2.6rem; top: 0.2rem; width: 1.2rem; height: 1.2rem; border-radius: 50%; background: #E11D48; border: 2px solid #fff;"></div>
+      <div style="position: absolute; left: -2.6rem; top: 0.2rem; width: 1.2rem; height: 1.2rem; border-radius: 50%; background: #E50000; border: 2px solid #fff;"></div>
       <div style="font-size: 1.4rem; font-weight: 800; color: #0F172A; text-transform: uppercase;">${evt.status}</div>
       <div style="font-size: 1.35rem; color: #475569; margin: 0.2rem 0;">${evt.note}</div>
       <div style="font-size: 1.2rem; color: #94A3B8;">${evt.created_at}</div>
@@ -152,7 +152,7 @@ function printInvoice() {
     <div style="font-family: var(--font-sans); padding: 4rem; max-width: 80rem; margin: 0 auto; background: #fff; color: #0F172A;">
       <div style="display: flex; justify-content: space-between; border-bottom: 2px solid #0F172A; padding-bottom: 2rem; margin-bottom: 2.4rem;">
         <div>
-          <h1 style="font-size: 2.8rem; font-weight: 900; margin: 0; color: #E11D48;">PickMyBuild Brickworks</h1>
+          <h1 style="font-size: 2.8rem; font-weight: 900; margin: 0; color: #E50000;">PickMyBuild Brickworks</h1>
           <p style="margin: 0.4rem 0; font-size: 1.3rem; color: #64748B;">Central Logistics Hub, Panampilly Nagar, Kochi, Kerala - 682001</p>
           <p style="margin: 0; font-size: 1.3rem; font-weight: 700;">GSTIN: 32AAACP9201P1Z8 (Toys & Scale Models)</p>
         </div>
@@ -214,7 +214,7 @@ function printInvoice() {
           <span>₹${sgst.toLocaleString('en-IN')}</span>
         </div>
         ${loadedOrder.discount ? `
-          <div style="display: flex; justify-content: space-between; color: #E11D48;">
+          <div style="display: flex; justify-content: space-between; color: #E50000;">
             <span>Coupon Discount (${loadedOrder.coupon_code}):</span>
             <span>-₹${loadedOrder.discount}</span>
           </div>

@@ -7,12 +7,12 @@
 :root {
   --color-background: 255, 255, 255;
   --color-foreground: 15, 23, 42; /* #0F172A */
-  --color-button: 225, 29, 72;    /* #E11D48 Track Red / Crimson */
+  --color-button: 229, 0, 0;      /* #E50000 Pure Racing Red */
   --color-button-text: 255, 255, 255;
   --color-secondary-button: 241, 245, 249;
   --color-secondary-button-text: 15, 23, 42;
   --color-shadow: 15, 23, 42;
-  --color-accent: #E11D48;
+  --color-accent: #E50000;
   --color-border: #E2E8F0;
   --color-muted: #64748B;
   --color-card-bg: #FFFFFF;
@@ -143,16 +143,16 @@ button {
   justify-content: center;
   width: 3.6rem;
   height: 3.6rem;
-  background: #E11D48;
+  background: #E50000;
   color: #ffffff;
   border-radius: 0.8rem;
   font-weight: 900;
   font-size: 1.8rem;
-  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.35);
+  box-shadow: 0 4px 12px rgba(229, 0, 0, 0.4);
 }
 
 .site-logo span span {
-  color: #E11D48;
+  color: #E50000;
 }
 
 .site-nav {
@@ -176,7 +176,7 @@ button {
 }
 
 .site-nav__link:hover, .site-nav__link.is-active {
-  color: #E11D48;
+  color: #E50000;
 }
 
 .site-actions {
@@ -212,7 +212,7 @@ button {
   height: 2rem;
   padding: 0 0.5rem;
   border-radius: 1rem;
-  background: #E11D48;
+  background: #E50000;
   color: #ffffff;
   font-size: 1.1rem;
   font-weight: 700;
@@ -260,12 +260,12 @@ button {
   align-items: center;
   gap: 0.8rem;
   padding: 0.6rem 1.4rem;
-  background: rgba(225, 29, 72, 0.15);
-  border: 1px solid rgba(225, 29, 72, 0.4);
-  color: #FDA4AF;
+  background: rgba(229, 0, 0, 0.18);
+  border: 1px solid rgba(229, 0, 0, 0.6);
+  color: #FFFFFF;
   border-radius: 10rem;
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 2rem;
@@ -307,18 +307,18 @@ button {
   justify-content: center;
   gap: 1rem;
   padding: 1.4rem 3rem;
-  background: #E11D48;
+  background: #E50000;
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: 700;
   border-radius: 10rem;
   border: none;
-  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.4);
+  box-shadow: 0 4px 14px rgba(229, 0, 0, 0.45);
   transition: transform 0.15s ease, background 0.15s ease;
 }
 
 .btn-primary:hover {
-  background: #BE123C;
+  background: #B80000;
   transform: translateY(-2px);
 }
 
@@ -352,7 +352,7 @@ button {
   position: absolute;
   width: 80%;
   height: 80%;
-  background: radial-gradient(circle, rgba(225, 29, 72, 0.3) 0%, rgba(15, 23, 42, 0) 70%);
+  background: radial-gradient(circle, rgba(229, 0, 0, 0.35) 0%, rgba(15, 23, 42, 0) 70%);
   filter: blur(40px);
   z-index: 1;
 }
@@ -390,7 +390,7 @@ button {
 }
 
 .hero-dot.is-active {
-  background: #E11D48;
+  background: #E50000;
   width: 3.2rem;
   border-radius: 1rem;
 }
@@ -425,8 +425,8 @@ button {
 }
 
 .pk-cat-circle:hover .pk-cat-circle__avatar {
-  border-color: #E11D48;
-  box-shadow: 0 6px 18px rgba(225, 29, 72, 0.2);
+  border-color: #E50000;
+  box-shadow: 0 6px 18px rgba(229, 0, 0, 0.25);
 }
 
 .pk-cat-circle__avatar img {
@@ -502,7 +502,7 @@ button {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background: #E11D48;
+  background: #E50000;
   color: #ffffff;
   z-index: 2;
 }
@@ -540,7 +540,7 @@ button {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #E11D48;
+  color: #E50000;
   margin-bottom: 0.4rem;
 }
 
@@ -611,7 +611,7 @@ button {
 }
 
 .pk-card__btn:hover {
-  background: #E11D48;
+  background: #E50000;
 }
 
 /* ---------- Slide-Out Bag Drawer ---------- */
@@ -756,7 +756,7 @@ button {
 .cart-item__price {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #E11D48;
+  color: #E50000;
   margin-bottom: 0.8rem;
 }
 
@@ -838,7 +838,7 @@ button {
 .btn-checkout {
   width: 100%;
   padding: 1.4rem;
-  background: #E11D48;
+  background: #E50000;
   color: #ffffff;
   border: none;
   border-radius: 10rem;
@@ -848,12 +848,12 @@ button {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.4);
+  box-shadow: 0 4px 14px rgba(229, 0, 0, 0.45);
   transition: all 0.15s ease;
 }
 
 .btn-checkout:hover {
-  background: #BE123C;
+  background: #B80000;
 }
 
 /* Toast notifications */
@@ -924,7 +924,7 @@ button {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #FDA4AF;
+  color: #FFFFFF;
   margin: 0 0 1.6rem;
 }
 

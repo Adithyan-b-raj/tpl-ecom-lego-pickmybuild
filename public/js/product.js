@@ -121,7 +121,7 @@ function renderVariants() {
   container.innerHTML = currentVariants.map((v, i) => `
     <div class="variant-card ${v.sku === selectedVariant.sku ? 'is-selected' : ''}" onclick="selectVariant('${v.sku}')">
       <div style="font-size: 1.35rem; font-weight: 800; color: #0F172A; margin-bottom: 0.4rem;">${v.title}</div>
-      <div style="font-size: 1.5rem; font-weight: 900; color: #E11D48;">₹${Number(v.price).toLocaleString('en-IN')}</div>
+      <div style="font-size: 1.5rem; font-weight: 900; color: #E50000;">₹${Number(v.price).toLocaleString('en-IN')}</div>
     </div>
   `).join('');
 }

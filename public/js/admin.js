@@ -195,7 +195,7 @@ async function loadAdminInventory() {
   tbody.innerHTML = currentInventory.map(item => `
     <tr style="border-bottom: 1px solid #334155;">
       <td style="padding: 1.4rem 2rem; font-weight: 700; color: #fff;">${item.title}</td>
-      <td style="padding: 1.4rem 2rem; color: #FDA4AF;">${item.category}</td>
+      <td style="padding: 1.4rem 2rem; color: #E2E8F0;">${item.category}</td>
       <td style="padding: 1.4rem 2rem; color: #fff;">₹${Number(item.price).toLocaleString('en-IN')}</td>
       <td style="padding: 1.4rem 2rem;">
         <span style="font-size: 1.5rem; font-weight: 800; color: ${item.stock < 10 ? '#EF4444' : '#10B981'};">

@@ -99,8 +99,8 @@
 
               <div style="display: grid; grid-template-columns: 1fr; gap: 1.4rem;">
                 <!-- Instant UPI Option -->
-                <label style="display: flex; gap: 1.4rem; padding: 1.8rem; border: 2px solid #E11D48; border-radius: 1.2rem; background: #FFF1F2; cursor: pointer;">
-                  <input type="radio" name="payment_method" value="upi" checked onchange="switchPaymentMethod('upi')" style="margin-top: 0.4rem; accent-color: #E11D48;" />
+                <label style="display: flex; gap: 1.4rem; padding: 1.8rem; border: 2px solid #E50000; border-radius: 1.2rem; background: #FEF2F2; cursor: pointer;">
+                  <input type="radio" name="payment_method" value="upi" checked onchange="switchPaymentMethod('upi')" style="margin-top: 0.4rem; accent-color: #E50000;" />
                   <div>
                     <div style="font-size: 1.6rem; font-weight: 800; color: #0F172A; display: flex; align-items: center; gap: 1rem;">
                       <span>Instant Dynamic UPI (Zero Fee)</span>
@@ -112,7 +112,7 @@
 
                 <!-- COD Option -->
                 <label style="display: flex; gap: 1.4rem; padding: 1.8rem; border: 1px solid var(--color-border); border-radius: 1.2rem; background: #ffffff; cursor: pointer;">
-                  <input type="radio" name="payment_method" value="cod" onchange="switchPaymentMethod('cod')" style="margin-top: 0.4rem; accent-color: #E11D48;" />
+                  <input type="radio" name="payment_method" value="cod" onchange="switchPaymentMethod('cod')" style="margin-top: 0.4rem; accent-color: #E50000;" />
                   <div>
                     <div style="font-size: 1.6rem; font-weight: 800; color: #0F172A;">
                       <span>Cash on Delivery (COD)</span>
@@ -132,7 +132,7 @@
 
           <!-- Dynamic UPI Modal / Container -->
           <div id="upi-modal" style="display: none; margin-top: 3.2rem; padding: 2.8rem; border-radius: 1.6rem; background: #0F172A; color: #ffffff; text-align: center;">
-            <div style="display: inline-flex; align-items: center; gap: 0.8rem; background: rgba(225, 29, 72, 0.2); padding: 0.6rem 1.4rem; border-radius: 10rem; color: #FDA4AF; font-size: 1.3rem; font-weight: 700; margin-bottom: 1.6rem;">
+            <div style="display: inline-flex; align-items: center; gap: 0.8rem; background: rgba(229, 0, 0, 0.2); padding: 0.6rem 1.4rem; border-radius: 10rem; color: #FFFFFF; font-size: 1.3rem; font-weight: 700; margin-bottom: 1.6rem;">
               <span id="upi-timer">⏳ 30:00 reservation timer</span>
             </div>
             <h3 style="font-size: 2.2rem; font-weight: 900; margin: 0 0 0.8rem; color: #ffffff;">Scan & Pay with Any UPI App</h3>
@@ -147,7 +147,7 @@
             </div>
 
             <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 1.2rem; border: 1px solid rgba(255,255,255,0.1); max-width: 44rem; margin: 0 auto; text-align: left;">
-              <label style="display: block; font-size: 1.35rem; font-weight: 700; margin-bottom: 0.6rem; color: #FDA4AF;">Submit 12-Digit Bank UTR / Reference No. *</label>
+              <label style="display: block; font-size: 1.35rem; font-weight: 700; margin-bottom: 0.6rem; color: #FFFFFF;">Submit 12-Digit Bank UTR / Reference No. *</label>
               <div style="display: flex; gap: 0.8rem;">
                 <input type="text" id="utr-input" maxlength="12" placeholder="e.g. 431189920154" style="flex: 1; padding: 1.2rem; border-radius: 0.8rem; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.4); color: #fff; font-family: var(--font-mono); font-size: 1.5rem; outline: none;" />
                 <button type="button" class="btn-primary" onclick="submitUTR()" style="white-space: nowrap;">Verify UTR</button>
@@ -188,7 +188,7 @@
               <span style="color: #64748B;">Cash on Delivery Fee</span>
               <span style="font-weight: 700;" id="sum-cod">₹0</span>
             </div>
-            <div style="display: flex; justify-content: space-between; font-size: 1.45rem; color: #E11D48;" id="discount-row" style="display: none;">
+            <div style="display: flex; justify-content: space-between; font-size: 1.45rem; color: #E50000;" id="discount-row" style="display: none;">
               <span>Discount</span>
               <span style="font-weight: 700;" id="sum-discount">-₹0</span>
             </div>
