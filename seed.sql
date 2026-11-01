@@ -300,11 +300,11 @@ INSERT INTO variants (id, product_id, sku, title, option_name, option_value, pri
   ('var_m1_std', 'prod_bmw_m1', 'PMB-BMW-M1C-STD', 'BMW M1 Procar Classic (Standard Kit)', 'Kit Option', 'Standard Kit (1,480 pcs)', 3199, 3899, 12),
   ('var_m1_dsp', 'prod_bmw_m1', 'PMB-BMW-M1C-DSP', 'BMW M1 Procar Classic (Display Bundle + Case)', 'Kit Option', 'Display Bundle (+ Acrylic Plaque & LED)', 3699, 4499, 8),
 
-  ('var_fjc_std', 'prod_toyota_fj_cruiser', 'PMB-TOY-FJC-STD', 'Toyota FJ Cruiser Dakar (Standard Kit)', 'Kit Option', 'Standard Kit (1,840 pcs)', 3799, 4499, 15),
-  ('var_fjc_dsp', 'prod_toyota_fj_cruiser', 'PMB-TOY-FJC-DSP', 'Toyota FJ Cruiser Dakar (Display Bundle + Case)', 'Kit Option', 'Display Bundle (+ Acrylic Plaque & LED)', 4299, 5199, 9),
+  ('var_fjc_std', 'prod_fj_cruiser', 'PMB-TOY-FJC-STD', 'Toyota FJ Cruiser Dakar (Standard Kit)', 'Kit Option', 'Standard Kit (1,840 pcs)', 3799, 4499, 15),
+  ('var_fjc_dsp', 'prod_fj_cruiser', 'PMB-TOY-FJC-DSP', 'Toyota FJ Cruiser Dakar (Display Bundle + Case)', 'Kit Option', 'Display Bundle (+ Acrylic Plaque & LED)', 4299, 5199, 9),
 
-  ('var_n74_std', 'prod_hyundai_n_vision_74', 'PMB-HYU-N74-STD', 'Hyundai N Vision 74 (Standard Kit)', 'Kit Option', 'Standard Kit (1,510 pcs)', 3399, 3999, 17),
-  ('var_n74_dsp', 'prod_hyundai_n_vision_74', 'PMB-HYU-N74-DSP', 'Hyundai N Vision 74 (Display Bundle + Case)', 'Kit Option', 'Display Bundle (+ Acrylic Plaque & LED)', 3899, 4699, 9);
+  ('var_n74_std', 'prod_n74', 'PMB-HYU-N74-STD', 'Hyundai N Vision 74 (Standard Kit)', 'Kit Option', 'Standard Kit (1,510 pcs)', 3399, 3999, 17),
+  ('var_n74_dsp', 'prod_n74', 'PMB-HYU-N74-DSP', 'Hyundai N Vision 74 (Display Bundle + Case)', 'Kit Option', 'Display Bundle (+ Acrylic Plaque & LED)', 3899, 4699, 9);
 
 -- Stock Ledger Initial Audit Entries
 INSERT INTO stock_ledger (id, product_id, sku, delta, balance, reason, reference_id) VALUES

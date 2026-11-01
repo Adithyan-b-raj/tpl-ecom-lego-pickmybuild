@@ -5,4 +5,4 @@ pages_build_output_dir = "public"
 [[d1_databases]]
 binding = "DB"
 database_name = "pickmybuild-db"
-database_id = "pickmybuild-db"
+database_id = "46065c3f-b5bc-4b50-b0d9-e684d67dab5e"
